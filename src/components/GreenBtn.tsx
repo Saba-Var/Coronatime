@@ -1,7 +1,11 @@
+import { useTranslation } from 'react-i18next'
+
 const GreenBtn: React.FC<{ text: string }> = (props) => {
+  const { t } = useTranslation()
+
   return (
     <button className='bg-green w-full mt-6 rounded-lg h-12 font-black text-white cursor-pointer'>
-      {props.text}
+      {t(props.text)}
     </button>
   )
 }

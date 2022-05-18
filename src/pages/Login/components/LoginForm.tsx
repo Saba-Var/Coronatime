@@ -5,19 +5,11 @@ function LoginForm() {
   return (
     <form>
       <div className='flex flex-col gap-4'>
-        <TextInput
-          type='text'
-          label='Username'
-          placeholder='Enter unique username or email'
-        />
-        <TextInput
-          type='password'
-          label='Password'
-          placeholder='Fill in password'
-        />
+        <TextInput type='text' label='Username' />
+        <TextInput type='password' label='Password' />
       </div>
       <ForgotPassword />
-      <GreenBtn text='LOG IN' />
+      <GreenBtn text='Log in' />
     </form>
   )
 }
