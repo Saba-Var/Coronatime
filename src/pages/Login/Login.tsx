@@ -1,12 +1,8 @@
+import { ForgotPassword, SignUpFree } from 'pages/Login/components'
 import { GreenBtn, Language } from 'components'
 import { vaccines } from 'assets/images'
+import { TextInput } from 'components'
 import { Logo } from 'components/svgs'
-import {
-  Username,
-  Password,
-  ForgotPassword,
-  SignUpFree,
-} from 'pages/Login/components'
 
 function Login() {
   return (
@@ -18,8 +14,11 @@ function Login() {
           Welcome back! Please enter your details
         </p>
         <div className='flex flex-col gap-4'>
-          <Username />
-          <Password />
+          <TextInput
+            label='Username'
+            placeholder='Enter unique username or email'
+          />
+          <TextInput label='Password' placeholder='Fill in password' />
         </div>
         <ForgotPassword />
         <GreenBtn text='LOG IN' />
