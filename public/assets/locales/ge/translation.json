@@ -11,5 +11,7 @@
   "Georgian": "ქართული",
   "Password": "პაროლი",
   "Username": "სახელი",
-  "Log in": "შესვლა"
+  "Log in": "შესვლა",
+  "Name not found": "სახელი ვერ მოიძებნა",
+  "Password not found": "პაროლი ვერ მოიძებნა"
 }
