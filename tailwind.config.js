@@ -12,6 +12,7 @@ module.exports = {
         'link-blue': '#2029F3',
         green: '#0FBA68',
         white: '#fff',
+        red: '#CC1E1E',
       },
       fontFamily: {
         Inter: ['Inter', 'sans-serif'],

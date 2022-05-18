@@ -1,14 +1,17 @@
 import { ForgotPassword } from 'pages/Login/components'
 import { TextInput, GreenBtn } from 'components'
+import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
+import { useState } from 'react'
 import axios from 'axios'
-
 type formData = {
   Username: string
   Password: string
 }
 
 function LoginForm() {
+  const { t } = useTranslation()
+  const [apiError, setApiError] = useState(false)
   const {
     register,
     handleSubmit,
@@ -21,7 +24,7 @@ function LoginForm() {
     },
   })
 
-  const submitHandler = (data: formData) => {
+  const submitHandler = (data: formData): void => {
     axios({
       method: 'post',
       url: 'https://coronatime-api.devtest.ge/api/login',
@@ -35,15 +38,31 @@ function LoginForm() {
         password: data.Password,
       }),
     })
-      .then((response) => console.log(response))
-      .catch((error) => console.log(error))
+      .then((res) => setApiError(false))
+      .catch((error) => {
+        if (error) setApiError(true)
+      })
   }
 
   return (
     <form onSubmit={handleSubmit(submitHandler)}>
       <div className='flex flex-col gap-4'>
-        <TextInput type='text' label='Username' register={register} />
-        <TextInput type='password' label='Password' register={register} />
+        <TextInput
+          type='text'
+          label='Username'
+          register={register}
+          apiError={apiError}
+          message={t('Name not found')}
+          errors={errors.Username}
+          unique={t('unique')}
+        />
+        <TextInput
+          type='password'
+          label='Password'
+          register={register}
+          apiError={apiError}
+          message={t('Password not found')}
+        />
       </div>
       <ForgotPassword />
       <GreenBtn text='Log in' />
