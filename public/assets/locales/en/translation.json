@@ -14,5 +14,7 @@
   "Name not found": "Name not found",
   "Password not found": "Password did not match",
   "Georgia": "Georgia",
-  "unique": "Username should be unique, min 3 symbols "
+  "unique": "Username should be unique, min 3 symbols ",
+  "Welcome CoronaTime": "Welcome to CoronaTime",
+  "Enter info": "Please enter required info to sign up"
 }

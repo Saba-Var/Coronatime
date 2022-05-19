@@ -1,19 +1,15 @@
-import { SignUpFree, WelcomeText, Wrapper } from 'pages/Login/components'
+import { SignUpFree, Wrapper } from 'pages/Login/components'
 import { LoginForm } from 'pages/Login/components'
-import { Logo } from 'components/svgs'
-import { Language } from 'components'
+import { useTranslation } from 'react-i18next'
 
 function Login() {
+  const { t } = useTranslation()
+
   return (
-    <Wrapper>
+    <Wrapper title={t('Welcome Back')} details={t('Enter details')}>
       <>
-        <Logo />
-        <WelcomeText />
         <LoginForm />
         <SignUpFree />
-        <div className='flex justify-center pt-5'>
-          <Language />
-        </div>
       </>
     </Wrapper>
   )

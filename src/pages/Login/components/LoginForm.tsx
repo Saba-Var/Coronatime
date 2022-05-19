@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import axios from 'axios'
+
 type formData = {
   Username: string
   Password: string
@@ -41,6 +42,7 @@ function LoginForm() {
       .then((res) => setApiError(false))
       .catch((error) => {
         if (error) setApiError(true)
+        console.log('error')
       })
   }
 
