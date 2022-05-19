@@ -1,6 +1,6 @@
-import { SignUpFree, LoginForm } from 'pages/Login/components'
+import { LoginForm } from 'pages/Login/components'
 import { useTranslation } from 'react-i18next'
-import { Wrapper } from 'components'
+import { Wrapper, Question } from 'components'
 
 function Login() {
   const { t } = useTranslation()
@@ -9,7 +9,11 @@ function Login() {
     <Wrapper title={t('Welcome Back')} details={t('Enter details')}>
       <>
         <LoginForm />
-        <SignUpFree />
+        <Question
+          question={t('Dont have')}
+          action={t('Sign up')}
+          link='/Sign-up'
+        />
       </>
     </Wrapper>
   )
