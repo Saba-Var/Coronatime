@@ -2,13 +2,14 @@ import { useTranslation } from 'react-i18next'
 import { ErrorMessage } from 'components'
 
 type props = {
-  label: string
-  register: any
-  type: string
+  placeholder: string
   apiError?: boolean
   message: string
-  errors?: {}
   unique?: string
+  register: any
+  label: string
+  type: string
+  errors?: {}
 }
 
 const TextInput: React.FC<props> = (props) => {
@@ -20,15 +21,15 @@ const TextInput: React.FC<props> = (props) => {
         {...props.register(props.label, {
           required: true,
           minLength: {
-            value: props.label === 'Username' ? 3 : 1,
-            message: 'Must be unique',
+            value: props.label !== 'Password' ? 3 : 1,
+            message: props.message,
           },
         })}
         type={props.type}
         className={`border-border-gray border-[1px] h-14 px-6 rounded-lg focus:ring-2 focus:border-link-blue outline-none ${
           (props.apiError || props.errors) && 'border-red border-2'
         } bg-transparent`}
-        placeholder={t(props.label + ' placeholder')}
+        placeholder={props.placeholder}
       />
       {!props.errors && props.apiError && (
         <ErrorMessage text={props.message} apiError={props.apiError} />

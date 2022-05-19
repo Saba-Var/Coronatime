@@ -1,4 +1,3 @@
-import { Input } from 'pages/Signup/components'
 import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
 import { GreenBtn } from 'components'
@@ -28,7 +27,7 @@ function LoginForm() {
   return (
     <form onSubmit={handleSubmit(submitHandler)}>
       <div className='flex flex-col gap-4'> </div>
-      {/* <Input label={t('Username')} placeholder={t('Unique username')} /> */}
+
       <GreenBtn text={t('SIGN UP')} />
     </form>
   )

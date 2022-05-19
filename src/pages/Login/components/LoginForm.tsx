@@ -50,20 +50,22 @@ function LoginForm() {
     <form onSubmit={handleSubmit(submitHandler)}>
       <div className='flex flex-col gap-4'>
         <TextInput
-          type='text'
-          label='Username'
-          register={register}
-          apiError={apiError}
+          placeholder={t('Username placeholder')}
           message={t('Name not found')}
           errors={errors.Username}
           unique={t('unique')}
-        />
-        <TextInput
-          type='password'
-          label='Password'
           register={register}
           apiError={apiError}
+          label='Username'
+          type='text'
+        />
+        <TextInput
+          placeholder={t('Password placeholder')}
           message={t('Password not found')}
+          register={register}
+          apiError={apiError}
+          label='Password'
+          type='password'
         />
       </div>
       <ForgotPassword />
