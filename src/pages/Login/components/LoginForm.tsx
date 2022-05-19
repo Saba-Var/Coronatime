@@ -58,6 +58,7 @@ function LoginForm() {
           apiError={apiError}
           label='Username'
           type='text'
+          value={3}
         />
         <TextInput
           placeholder={t('Password placeholder')}
@@ -65,7 +66,7 @@ function LoginForm() {
           register={register}
           apiError={apiError}
           errors={errors.Password}
-          required={t('Unique Password')}
+          required={t('Required')}
           label='Password'
           type='password'
         />

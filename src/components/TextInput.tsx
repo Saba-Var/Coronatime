@@ -2,9 +2,10 @@ import { useTranslation } from 'react-i18next'
 import { ErrorMessage } from 'components'
 
 type props = {
+  value?: number
   placeholder: string
   apiError?: boolean
-  message: string
+  message?: string
   unique?: string
   register: any
   label: string
@@ -22,7 +23,7 @@ const TextInput: React.FC<props> = (props) => {
         {...props.register(props.label, {
           required: true,
           minLength: {
-            value: props.label !== 'Password' ? 3 : 1,
+            value: props.value,
             message: props.message,
           },
         })}
