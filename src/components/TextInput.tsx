@@ -5,7 +5,7 @@ type props = {
   label: string
   register: any
   type: string
-  apiError: boolean
+  apiError?: boolean
   message: string
   errors?: {}
   unique?: string
@@ -25,13 +25,17 @@ const TextInput: React.FC<props> = (props) => {
           },
         })}
         type={props.type}
-        className={`border-border-gray bg-transparent border-[1px] h-14 px-6 rounded-lg focus:ring-2 focus:border-link-blue outline-none ${
+        className={`border-border-gray border-[1px] h-14 px-6 rounded-lg focus:ring-2 focus:border-link-blue outline-none ${
           (props.apiError || props.errors) && 'border-red border-2'
-        }`}
+        } bg-transparent`}
         placeholder={t(props.label + ' placeholder')}
       />
-      {!props.errors && props.apiError && <ErrorMessage text={props.message} />}
-      {props.errors && <ErrorMessage text={props.unique} />}
+      {!props.errors && props.apiError && (
+        <ErrorMessage text={props.message} apiError={props.apiError} />
+      )}
+      {props.errors && (
+        <ErrorMessage text={props.unique} error={props.errors} />
+      )}
     </div>
   )
 }

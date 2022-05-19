@@ -1,1 +1,1 @@
-export { default } from './Covid'
+export { default } from './Login'
