@@ -18,5 +18,12 @@
   "Welcome CoronaTime": "Welcome to CoronaTime",
   "Enter info": "Please enter required info to sign up",
   "SIGN UP": "SIGN UP",
-  "Unique username": "Enter unique username"
+  "Unique username": "Enter unique username",
+  "Email": "Email",
+  "Email Placeholder": "Enter your email",
+  "Repeat Password": "Repeat Password",
+  "Have account": "Already have an account?",
+  "Sign": "Log in",
+  "Unique Password": "Password should be unique, min 3 symbols",
+  "Required": "This field is required"
 }

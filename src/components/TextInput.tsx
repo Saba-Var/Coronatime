@@ -9,6 +9,7 @@ type props = {
   register: any
   label: string
   type: string
+  required?: string
   errors?: {}
 }
 
@@ -35,7 +36,10 @@ const TextInput: React.FC<props> = (props) => {
         <ErrorMessage text={props.message} apiError={props.apiError} />
       )}
       {props.errors && (
-        <ErrorMessage text={props.unique} error={props.errors} />
+        <ErrorMessage
+          text={props.unique || props.required}
+          error={props.errors}
+        />
       )}
     </div>
   )

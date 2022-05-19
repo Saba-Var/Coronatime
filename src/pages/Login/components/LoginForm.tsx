@@ -64,6 +64,8 @@ function LoginForm() {
           message={t('Password not found')}
           register={register}
           apiError={apiError}
+          errors={errors.Password}
+          required={t('Unique Password')}
           label='Password'
           type='password'
         />
