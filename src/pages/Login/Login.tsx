@@ -1,6 +1,6 @@
-import { SignUpFree, Wrapper } from 'pages/Login/components'
-import { LoginForm } from 'pages/Login/components'
+import { SignUpFree, LoginForm } from 'pages/Login/components'
 import { useTranslation } from 'react-i18next'
+import { Wrapper } from 'components'
 
 function Login() {
   const { t } = useTranslation()
