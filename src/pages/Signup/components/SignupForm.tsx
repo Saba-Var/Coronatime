@@ -14,7 +14,7 @@ function SignupForm() {
     watch,
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, dirtyFields },
   } = useForm({
     mode: 'all',
     defaultValues: {
@@ -38,29 +38,33 @@ function SignupForm() {
           label='Username'
           type='text'
           value={3}
+          dirtyFields={dirtyFields}
         />
         <EmailInput
           register={register}
           label={'Email'}
           errors={errors.Email}
           valid={t('Valid email')}
+          dirtyFields={dirtyFields}
         />
         <TextInput
           placeholder={t('Password placeholder')}
-          errors={errors.Password}
           unique={t('Unique Password')}
+          errors={errors.Password}
+          dirtyFields={dirtyFields}
           register={register}
           label='Password'
           type='password'
           value={3}
         />
         <RepeatPassword
-          data={watch()}
-          register={register}
-          label={'Repeat Password'}
           errors={errors['Repeat Password']}
           valid={t(`Password match`)}
+          label={'Repeat Password'}
           required={t('Required')}
+          register={register}
+          data={watch()}
+          dirtyFields={dirtyFields}
         />
       </div>
       <GreenBtn text={t('SIGN UP')} />

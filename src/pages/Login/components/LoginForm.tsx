@@ -16,7 +16,7 @@ function LoginForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, dirtyFields },
   } = useForm({
     mode: 'all',
     defaultValues: {
@@ -24,7 +24,7 @@ function LoginForm() {
       Password: '',
     },
   })
-
+  console.log(dirtyFields)
   const submitHandler = (data: formData): void => {
     axios({
       method: 'post',
@@ -59,6 +59,7 @@ function LoginForm() {
           label='Username'
           type='text'
           value={3}
+          dirtyFields={dirtyFields}
         />
         <TextInput
           placeholder={t('Password placeholder')}
@@ -69,6 +70,7 @@ function LoginForm() {
           required={t('Required')}
           label='Password'
           type='password'
+          dirtyFields={dirtyFields}
         />
       </div>
       <ForgotPassword />
