@@ -35,7 +35,6 @@ function SignupForm() {
         repeatPassword: data['Repeat Password'],
         redirectOnConfirm: 'http://localhost:3000/',
       })
-
       axios({
         method: 'post',
         url: 'https://coronatime-api.devtest.ge/api/register',

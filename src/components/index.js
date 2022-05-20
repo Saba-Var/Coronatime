@@ -1,4 +1,6 @@
 export { default as RepeatPassword } from './RepeatPassword'
+export { default as SuccessMessage } from './SuccessMessage'
+export { default as Confirmation } from './Confirmation'
 export { default as ErrorMessage } from './ErrorMessage'
 export { default as WelcomeText } from './WelcomeText'
 export { default as EmailInput } from './EmailInput'

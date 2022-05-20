@@ -4,9 +4,9 @@ function Logo() {
   return (
     <Link to='/'>
       <svg
-        className='cursor-pointer'
         width='137'
         height='33'
+        className='cursor-pointer md:w-42.3 md:h-11'
         viewBox='0 0 137 33'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
