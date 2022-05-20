@@ -22,7 +22,7 @@ const Wrapper: React.FC<propsType> = (props) => {
         </div>
         <img
           src={vaccines}
-          className='hidden lg:block h-full'
+          className='hidden lg:block h-full w-[635px]'
           alt='covid-19 vaccines'
         />
       </div>
