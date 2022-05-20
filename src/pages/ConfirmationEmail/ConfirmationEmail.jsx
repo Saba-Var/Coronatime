@@ -1,9 +1,12 @@
+import { useTranslation } from 'react-i18next'
 import { Confirmation } from 'components'
 
 const ConfirmationEmail = () => {
+  const { t } = useTranslation()
+
   return (
     <>
-      <Confirmation text='We have sent you a confirmation email' width='w-82' />
+      <Confirmation text={t('Confirm Email')} width='w-82' />
     </>
   )
 }
