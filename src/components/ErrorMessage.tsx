@@ -1,15 +1,22 @@
 import { ErrorIcon } from 'components/svgs'
 
-const ErrorMessage: React.FC<{
+type propsType = {
   text: string | undefined
   apiError?: any
   error?: any
-}> = (props) => {
+  show: any
+}
+
+const ErrorMessage: React.FC<propsType> = (props) => {
   return (
-    <div className='flex items-center gap-2'>
-      {(props.apiError || props.error) && <ErrorIcon />}
-      <p className='text-red text-sm'>{props.text}</p>
-    </div>
+    <>
+      {props.show && (
+        <div className='flex items-center gap-2'>
+          {(props.apiError || props.error) && <ErrorIcon />}
+          <p className='text-red text-sm'>{props.text}</p>
+        </div>
+      )}
+    </>
   )
 }
 

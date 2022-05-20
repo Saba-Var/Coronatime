@@ -32,10 +32,14 @@ const RepeatPassword: React.FC<propsType> = (props) => {
         } bg-transparent ${isCorrect && 'border-green'}`}
         placeholder={t('Repeat Password')}
       />
-      {required && (
-        <ErrorMessage text={t(props.errors.message)} error={props.errors} />
-      )}
-      {match && <ErrorMessage text={t('Password match')} error={match} />}
+
+      <ErrorMessage
+        show={required}
+        text={t(props.errors?.message)}
+        error={props.errors}
+      />
+
+      <ErrorMessage show={match} text={t('Password match')} error={match} />
       {isCorrect && <CorrectIcon />}
     </div>
   )

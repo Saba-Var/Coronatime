@@ -28,16 +28,21 @@ function SignupForm() {
 
   const submitHandler = (data: formData): void => {}
 
+  const formState = {
+    dirtyFields,
+    errors,
+    register,
+  }
+
   return (
     <form onSubmit={handleSubmit(submitHandler)}>
       <div className='flex flex-col gap-4'>
         <TextInput
           placeholder={t('Username placeholder')}
-          dirtyFields={dirtyFields}
-          errors={errors.Username}
+          formState={formState}
           unique={t('unique')}
-          register={register}
           label='Username'
+          page='Signup'
           type='text'
           value={3}
         />
@@ -51,9 +56,7 @@ function SignupForm() {
         <TextInput
           placeholder={t('Password placeholder')}
           unique={t('Unique Password')}
-          dirtyFields={dirtyFields}
-          errors={errors.Password}
-          register={register}
+          formState={formState}
           label='Password'
           type='password'
           value={3}

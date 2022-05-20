@@ -12,7 +12,7 @@ type formData = {
 
 function LoginForm() {
   const { t } = useTranslation()
-  const [apiError, setApiError] = useState(false)
+  const [apiError, setApiError] = useState<boolean>(false)
   const {
     register,
     handleSubmit,
@@ -46,31 +46,32 @@ function LoginForm() {
       })
   }
 
+  const formState = {
+    dirtyFields,
+    register,
+    apiError,
+    errors,
+  }
+
   return (
     <form onSubmit={handleSubmit(submitHandler)}>
       <div className='flex flex-col gap-4'>
         <TextInput
           placeholder={t('Username placeholder')}
           message={t('Name not found')}
-          errors={errors.Username}
+          formState={formState}
           unique={t('unique')}
-          register={register}
-          apiError={apiError}
           label='Username'
           type='text'
           value={3}
-          dirtyFields={dirtyFields}
         />
         <TextInput
           placeholder={t('Password placeholder')}
           message={t('Password not found')}
-          register={register}
-          apiError={apiError}
-          errors={errors.Password}
           required={t('Required')}
+          formState={formState}
           label='Password'
           type='password'
-          dirtyFields={dirtyFields}
         />
       </div>
       <ForgotPassword />

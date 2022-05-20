@@ -3,16 +3,17 @@ import { CorrectIcon } from 'components/svgs'
 import { ErrorMessage } from 'components'
 
 type propsType = {
+  dirtyFields: any
+  valid: string
   register: any
   label: string
   errors: any
-  valid: string
-  dirtyFields: any
 }
 
 const EmailInput: React.FC<propsType> = (props) => {
   const isCorrect = !props.errors && props.dirtyFields[props.label]
   const { t } = useTranslation()
+
   return (
     <div className='flex flex-col gap-2 relative'>
       <label className='text-black'>{t(props.label)}</label>
@@ -30,7 +31,11 @@ const EmailInput: React.FC<propsType> = (props) => {
         } bg-transparent ${isCorrect && 'border-green'}`}
         placeholder={t('Email Placeholder')}
       />
-      {props.errors && <ErrorMessage text={props.valid} error={props.errors} />}
+      <ErrorMessage
+        text={props.valid}
+        error={props.errors}
+        show={props.errors}
+      />
       {isCorrect && <CorrectIcon />}
     </div>
   )
