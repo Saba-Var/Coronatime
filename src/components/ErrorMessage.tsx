@@ -1,13 +1,7 @@
 import { ErrorIcon } from 'components/svgs'
+import { ErrMsg } from 'components/types'
 
-type propsType = {
-  text: string | undefined
-  apiError?: any
-  error?: any
-  show: any
-}
-
-const ErrorMessage: React.FC<propsType> = (props) => {
+const ErrorMessage: React.FC<ErrMsg> = (props) => {
   return (
     <>
       {props.show && (

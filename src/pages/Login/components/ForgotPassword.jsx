@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Remember } from 'components'
+
 function ForgotPassword() {
   const { t } = useTranslation()
   return (

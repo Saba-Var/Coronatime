@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import i18n from 'i18next'
 
 function Language() {
-  const [language, setLanguage] = useState('en')
+  const [language, setLanguage] = useState<string>('en')
   const { t } = useTranslation()
 
   useEffect(() => {

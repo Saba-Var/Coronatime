@@ -1,26 +1,9 @@
+import { InputFieldProps } from 'components/types'
 import { useTranslation } from 'react-i18next'
-import { ErrorMessage } from 'components'
 import { CorrectIcon } from 'components/svgs'
+import { ErrorMessage } from 'components'
 
-type props = {
-  placeholder: string
-  required?: string
-  message?: string
-  unique?: string
-  value?: number
-  label: string
-  page?: string
-  type: string
-
-  formState: {
-    apiError?: boolean
-    dirtyFields: any
-    register: any
-    errors: any
-  }
-}
-
-const TextInput: React.FC<props> = (props) => {
+const TextInput: React.FC<InputFieldProps> = (props) => {
   const formState = props.formState
   const error = formState.errors[props.label]
   const { t } = useTranslation()

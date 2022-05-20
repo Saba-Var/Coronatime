@@ -1,16 +1,9 @@
 import { useTranslation } from 'react-i18next'
 import { CorrectIcon } from 'components/svgs'
+import { EmailProps } from 'components/types'
 import { ErrorMessage } from 'components'
 
-type propsType = {
-  dirtyFields: any
-  valid: string
-  register: any
-  label: string
-  errors: any
-}
-
-const EmailInput: React.FC<propsType> = (props) => {
+const EmailInput: React.FC<EmailProps> = (props) => {
   const isCorrect = !props.errors && props.dirtyFields[props.label]
   const { t } = useTranslation()
 

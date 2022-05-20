@@ -1,18 +1,9 @@
+import { PasswordProps } from 'components/types'
 import { useTranslation } from 'react-i18next'
 import { CorrectIcon } from 'components/svgs'
 import { ErrorMessage } from 'components'
 
-type propsType = {
-  required: string
-  register: any
-  label: string
-  valid: string
-  errors: any
-  data: any
-  dirtyFields: any
-}
-
-const RepeatPassword: React.FC<propsType> = (props) => {
+const RepeatPassword: React.FC<PasswordProps> = (props) => {
   const { t } = useTranslation()
 
   const match = props.data['Repeat Password'] !== props.data.Password

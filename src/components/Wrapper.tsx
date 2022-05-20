@@ -1,5 +1,4 @@
 import { Language, WelcomeText } from 'components'
-import { useTranslation } from 'react-i18next'
 import { vaccines } from 'assets/images'
 import { Logo } from 'components/svgs'
 
