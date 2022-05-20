@@ -1,5 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Login, Signup, ConfirmationEmail, VerifyEmail } from 'pages'
+import {
+  Login,
+  Signup,
+  ConfirmationEmail,
+  VerifyEmail,
+  ConfirmedEmail,
+} from 'pages'
 
 function App() {
   return (
@@ -9,6 +15,7 @@ function App() {
         <Route path='/Sign-up' element={<Signup />} />
         <Route path='/Confirmation-email' element={<ConfirmationEmail />} />
         <Route path='/Verify-email' element={<VerifyEmail />} />
+        <Route path='/Confirmed-email' element={<ConfirmedEmail />} />
       </Routes>
     </Router>
   )

@@ -31,5 +31,7 @@
   "Sign": "Log in",
   "VERIFY EMAIL": "VERIFY EMAIL",
   "Confirmation email": "Confirmation email",
-  "Verify email": "click this button to verify your email"
+  "Verify email": "click this button to verify your email",
+  "Sign in": "SIGN IN",
+  "Confirmed account": "Your account is confirmed, you can sign in"
 }
