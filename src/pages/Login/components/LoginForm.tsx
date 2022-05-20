@@ -24,7 +24,7 @@ function LoginForm() {
       Password: '',
     },
   })
-  console.log(dirtyFields)
+
   const submitHandler = (data: formData): void => {
     axios({
       method: 'post',
@@ -42,7 +42,6 @@ function LoginForm() {
       .then((res) => setApiError(false))
       .catch((error) => {
         if (error) setApiError(true)
-        console.log('error')
       })
   }
 
