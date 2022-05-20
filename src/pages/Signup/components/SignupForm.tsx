@@ -33,7 +33,7 @@ function SignupForm() {
         email: data.Email,
         password: data.Password,
         repeatPassword: data['Repeat Password'],
-        redirectOnConfirm: 'http://localhost:3000/',
+        redirectOnConfirm: '/Verify-email',
       })
       axios({
         method: 'post',

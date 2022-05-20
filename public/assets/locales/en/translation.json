@@ -28,5 +28,8 @@
   "English": "English",
   "Log in": "LOG IN",
   "Email": "Email",
-  "Sign": "Log in"
+  "Sign": "Log in",
+  "VERIFY EMAIL": "VERIFY EMAIL",
+  "Confirmation email": "Confirmation email",
+  "Verify email": "click this button to verify your email"
 }
