@@ -14,8 +14,7 @@ const EmailInput: React.FC<EmailProps> = (props) => {
         {...props.register(props.label, {
           required: t('Required'),
           validate: {
-            'email format': (v: any) =>
-              v.includes('@redberry.ge') || props.valid,
+            'email format': (v: any) => v.includes('@') || props.valid,
           },
         })}
         type='text'

@@ -10,16 +10,19 @@ type formData = {
   Password: string
 }
 
-function LoginForm() {
+const LoginForm: React.FC<{ setUser: any }> = (props) => {
   const { t } = useTranslation()
   const [apiError, setApiError] = useState<boolean>(false)
+
   const {
+    watch,
     register,
     handleSubmit,
     formState: { errors, dirtyFields },
   } = useForm({
     mode: 'all',
     defaultValues: {
+      Checkbox: false,
       Username: '',
       Password: '',
     },
@@ -39,7 +42,14 @@ function LoginForm() {
         password: data.Password,
       }),
     })
-      .then((res) => setApiError(false))
+      .then((res) => {
+        if (res.status === 200) {
+          setApiError(false)
+          props.setUser(watch().Username)
+          if (watch().Checkbox)
+            localStorage.setItem('Username', watch().Username)
+        }
+      })
       .catch((error) => {
         if (error) setApiError(true)
       })
@@ -73,7 +83,7 @@ function LoginForm() {
           type='password'
         />
       </div>
-      <ForgotPassword />
+      <ForgotPassword register={register} />
       <GreenBtn text='Log in' />
     </form>
   )
