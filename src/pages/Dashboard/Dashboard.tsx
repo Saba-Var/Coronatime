@@ -1,10 +1,10 @@
 import { LogOut } from 'pages/Dashboard/components'
-import { Logo, MenuBar } from 'components/svgs'
+import { Menu } from 'pages/Dashboard/components'
+import { Logo } from 'components/svgs'
 import { Language } from 'components'
 
 const Dashboard: React.FC<{ user: string }> = (props) => {
   const name = localStorage.getItem('Username') || props.user
-
   const username = (
     <p className='hidden md:block text-base font-bold pr-4'>{name}</p>
   )
@@ -18,17 +18,8 @@ const Dashboard: React.FC<{ user: string }> = (props) => {
           <div className='flex gap-4 items-center'>
             {username}
             <div className='hidden md:block h-8 w-[1px] bg-border-gray'></div>
-            <LogOut />
-            <div className='md:hidden relative'>
-              <div>
-                <MenuBar />
-              </div>
-              <div className='absolute'>
-                <p className='hidden md:block text-base font-bold pr-4'>
-                  {name}
-                </p>
-              </div>
-            </div>
+            <LogOut styles='hidden md:block' />
+            <Menu name={name} />
           </div>
         </div>
       </div>

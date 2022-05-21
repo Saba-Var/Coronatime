@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next'
 
-const LogOut = () => {
+const LogOut: React.FC<{ styles: string }> = (props) => {
   const { t } = useTranslation()
 
   return (
-    <p className='hidden md:block font-medium text-sm cursor-pointer'>
+    <p className={`${props.styles} font-medium text-sm cursor-pointer`}>
       {t('Log Out')}
     </p>
   )

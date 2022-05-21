@@ -1,10 +1,11 @@
-const MenuBar = () => {
+const MenuBar = (props) => {
   return (
     <svg
+      onClick={props.onClick}
       width='18'
       height='16'
       viewBox='0 0 18 16'
-      className='cursor-pointer'
+      className='cursor-pointer md:hidden'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
