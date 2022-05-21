@@ -46,8 +46,10 @@ const LoginForm: React.FC<{ setUser: any }> = (props) => {
         if (res.status === 200) {
           setApiError(false)
           props.setUser(watch().Username)
-          if (watch().Checkbox)
+          if (watch().Checkbox) {
             localStorage.setItem('Username', watch().Username)
+            localStorage.setItem('token', res.data.token)
+          }
         }
       })
       .catch((error) => {

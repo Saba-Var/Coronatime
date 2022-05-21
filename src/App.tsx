@@ -6,6 +6,7 @@ import {
   ConfirmationEmail,
   VerifyEmail,
   ConfirmedEmail,
+  Dashboard,
 } from 'pages'
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/Confirmation-email' element={<ConfirmationEmail />} />
         <Route path='/Verify-email' element={<VerifyEmail />} />
         <Route path='/Confirmed-email' element={<ConfirmedEmail />} />
+        <Route path='/Dashboard' element={<Dashboard user={user} />} />
       </Routes>
     </Router>
   )
