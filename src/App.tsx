@@ -8,6 +8,7 @@ import {
   ConfirmedEmail,
   Dashboard,
   Worldwide,
+  Country,
 } from 'pages'
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='/Confirmed-email' element={<ConfirmedEmail />} />
         <Route path='/Dashboard' element={<Dashboard user={user} />}>
           <Route path='Worldwide' element={<Worldwide />} />
+          <Route path='By-country' element={<Country />} />
         </Route>
       </Routes>
     </Router>
