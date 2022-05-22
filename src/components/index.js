@@ -1,4 +1,5 @@
 export { default as RepeatPassword } from './RepeatPassword'
+export { default as StatisticGraph } from './StatisticGraph'
 export { default as VerifiedSignIn } from './VerifiedSignIn'
 export { default as Confirmation } from './Confirmation'
 export { default as ErrorMessage } from './ErrorMessage'
