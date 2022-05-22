@@ -1,4 +1,8 @@
-const ArrowDown: React.FC<{ isClicked: boolean; sort: boolean }> = (props) => {
+const ArrowDown: React.FC<{
+  isClicked: boolean
+  sort: boolean
+  target: boolean
+}> = (props) => {
   return (
     <svg
       width='10'
@@ -7,7 +11,7 @@ const ArrowDown: React.FC<{ isClicked: boolean; sort: boolean }> = (props) => {
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
       className={`opacity-20 ${
-        props.isClicked && !props.sort && 'opacity-100'
+        props.isClicked && !props.sort && props.target && 'opacity-100'
       }`}
     >
       <path d='M5 5.5L0 0.5H10L5 5.5Z' fill='#010414' />
