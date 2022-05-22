@@ -2,12 +2,15 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import i18n from 'i18next'
 
-function Language() {
+const Language: React.FC<{ setLanguage?: (language: string) => void }> = (
+  props
+) => {
   const [language, setLanguage] = useState<string>('en')
   const { t } = useTranslation()
 
   useEffect(() => {
     i18n.changeLanguage(language)
+    if (props.setLanguage) props.setLanguage(language)
   }, [language])
 
   return (

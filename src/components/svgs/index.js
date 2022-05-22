@@ -1,5 +1,8 @@
 export { default as CorrectIcon } from './CorrectIcon'
+export { default as SearchIcon } from './SearchIcon'
+export { default as ArrowDown } from './ArrowDown'
 export { default as ErrorIcon } from './ErrorIcon'
 export { default as UserIcon } from './UserIcon'
 export { default as MenuBar } from './MenuBar'
+export { default as ArrowUp } from './ArrowUp'
 export { default as Logo } from './Logo'

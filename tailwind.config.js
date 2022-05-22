@@ -20,6 +20,7 @@ module.exports = {
         blue: '#edeefe',
         yellow: '#EAD621',
         yellowBG: '#fdfced',
+        grayBG: '#F6F6F7',
       },
       fontFamily: {
         Inter: ['Inter', 'sans-serif'],

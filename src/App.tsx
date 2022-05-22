@@ -13,6 +13,7 @@ import {
 
 const App = () => {
   const [user, setUser] = useState<string>('')
+  const [language, setLanguage] = useState<string>('en')
 
   return (
     <Router>
@@ -22,7 +23,16 @@ const App = () => {
         <Route path='/Verify-email' element={<VerifyEmail />} />
         <Route path='/Confirmation-email' element={<ConfirmationEmail />} />
         <Route path='/Confirmed-email' element={<ConfirmedEmail />} />
-        <Route path='/Dashboard' element={<Dashboard user={user} />}>
+        <Route
+          path='/Dashboard'
+          element={
+            <Dashboard
+              user={user}
+              language={language}
+              setLanguage={setLanguage}
+            />
+          }
+        >
           <Route path='Worldwide' element={<Worldwide />} />
           <Route path='By-country' element={<Country />} />
         </Route>

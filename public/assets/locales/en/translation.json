@@ -40,6 +40,9 @@
   "By country": "By country",
   "Statistics by country": "Statistics by country",
   "New cases": "New cases",
-  "Recovered": "Recovered",
-  "Death": "Death"
+  "Death": "Death",
+  "Location": "Location",
+  "New Case": "New Cases",
+  "Deaths": "Deaths",
+  "Recovered": "Recovered"
 }

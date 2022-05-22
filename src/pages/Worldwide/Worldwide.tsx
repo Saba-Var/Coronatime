@@ -18,7 +18,7 @@ const Worldwide = () => {
     <>
       <Categories title='Worldwide' />
       <div className='flex justify-center xl:block'>
-        <div className='px-4 md:mx-12 xl:px-28 grid grid-cols-2 col-span-1 gap-y-2 xl:flex justify-between xl:gap-6'>
+        <div className='px-4 md:mx-12 xl:px-28 grid grid-cols-2 col-span-1 xl:flex justify-between xl:gap-6 gap-y-4'>
           <StatisticGraph
             containerStyle='bg-blue w-[343px] md:m-0  col-span-2'
             textStye='text-link-blue'
