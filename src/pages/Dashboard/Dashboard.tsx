@@ -2,9 +2,9 @@ import CountriesProvider from 'state/CountriesContext'
 import { Header } from 'pages/Dashboard/components'
 import { Outlet } from 'react-router-dom'
 
-const Dashboard: React.FC<{ user: string }> = (props) => {
+const Dashboard: React.FC<{ user: string; token: string }> = (props) => {
   return (
-    <CountriesProvider>
+    <CountriesProvider temporaryToken={props.token}>
       <div>
         <Header user={props.user} />
         <Outlet />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { dataType } from 'state/types'
+import { dataType, provider } from 'state/types'
 import { useEffect } from 'react'
 import axios from 'axios'
 
@@ -25,14 +25,15 @@ export const CountriesContext = React.createContext({
   setData: (data: dataType) => {},
 })
 
-const CountriesProvider: React.FC<{ children: JSX.Element }> = (props) => {
+const CountriesProvider: React.FC<provider> = (props) => {
   const [data, setData] = useState<dataType>(schema)
   useEffect(() => {
+    const token = localStorage.getItem('token') || props.temporaryToken
     axios({
       method: 'get',
       url: 'https://coronatime-api.devtest.ge/api/countries',
       headers: {
-        Authorization: 'Token ' + localStorage.getItem('token'),
+        Authorization: 'Token ' + token,
         accept: 'application/json',
       },
     })

@@ -12,3 +12,8 @@ export type dataType = {
     recovered: number
   }
 }[]
+
+export type provider = {
+  children: JSX.Element
+  temporaryToken: string
+}

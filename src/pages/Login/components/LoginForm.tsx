@@ -11,7 +11,10 @@ type formData = {
   Password: string
 }
 
-const LoginForm: React.FC<{ setUser: any }> = (props) => {
+const LoginForm: React.FC<{
+  setUser: any
+  setToken: (token: string) => void
+}> = (props) => {
   const navigate = useNavigate()
   const { t } = useTranslation()
   const [apiError, setApiError] = useState<boolean>(false)
@@ -51,7 +54,7 @@ const LoginForm: React.FC<{ setUser: any }> = (props) => {
           if (watch().Checkbox) {
             localStorage.setItem('Username', watch().Username)
             localStorage.setItem('token', res.data.token)
-          }
+          } else props.setToken(res.data.token)
           navigate('/Dashboard/Worldwide', { replace: true })
         }
       })
