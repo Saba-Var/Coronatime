@@ -7,6 +7,7 @@ import {
   VerifyEmail,
   ConfirmedEmail,
   Dashboard,
+  Worldwide,
 } from 'pages'
 
 const App = () => {
@@ -15,12 +16,14 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Login setUser={setUser} />} />
         <Route path='/Sign-up' element={<Signup />} />
-        <Route path='/Confirmation-email' element={<ConfirmationEmail />} />
+        <Route path='/' element={<Login setUser={setUser} />} />
         <Route path='/Verify-email' element={<VerifyEmail />} />
+        <Route path='/Confirmation-email' element={<ConfirmationEmail />} />
         <Route path='/Confirmed-email' element={<ConfirmedEmail />} />
-        <Route path='/Dashboard' element={<Dashboard user={user} />} />
+        <Route path='/Dashboard' element={<Dashboard user={user} />}>
+          <Route path='Worldwide' element={<Worldwide />} />
+        </Route>
       </Routes>
     </Router>
   )

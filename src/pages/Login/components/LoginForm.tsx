@@ -1,5 +1,6 @@
 import { ForgotPassword } from 'pages/Login/components'
 import { TextInput, GreenBtn } from 'components'
+import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
@@ -11,6 +12,7 @@ type formData = {
 }
 
 const LoginForm: React.FC<{ setUser: any }> = (props) => {
+  const navigate = useNavigate()
   const { t } = useTranslation()
   const [apiError, setApiError] = useState<boolean>(false)
 
@@ -50,6 +52,7 @@ const LoginForm: React.FC<{ setUser: any }> = (props) => {
             localStorage.setItem('Username', watch().Username)
             localStorage.setItem('token', res.data.token)
           }
+          navigate('/Dashboard/Worldwide', { replace: true })
         }
       })
       .catch((error) => {
