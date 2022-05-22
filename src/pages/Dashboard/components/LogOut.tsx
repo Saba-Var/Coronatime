@@ -1,10 +1,27 @@
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 
-const LogOut: React.FC<{ styles: string }> = (props) => {
+type propsType = {
+  styles: string
+  setToken: (token: string) => void
+}
+
+const LogOut: React.FC<propsType> = (props) => {
+  const navigate = useNavigate()
+
   const { t } = useTranslation()
+  const clickHandler = () => {
+    props.setToken('')
+    localStorage.removeItem('token')
+    localStorage.removeItem('Username')
+    navigate('/', { replace: true })
+  }
 
   return (
-    <p className={`${props.styles} font-medium text-sm cursor-pointer`}>
+    <p
+      onClick={clickHandler}
+      className={`${props.styles} font-medium text-sm cursor-pointer`}
+    >
       {t('Log Out')}
     </p>
   )

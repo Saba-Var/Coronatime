@@ -27,7 +27,7 @@ const App = () => {
         <Route path='/Confirmed-email' element={<ConfirmedEmail />} />
         <Route
           path='/Dashboard'
-          element={<Dashboard user={user} token={token} />}
+          element={<Dashboard user={user} token={token} setToken={setToken} />}
         >
           <Route path='Worldwide' element={<Worldwide />} />
         </Route>

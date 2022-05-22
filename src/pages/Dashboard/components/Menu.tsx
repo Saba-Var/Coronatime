@@ -2,7 +2,10 @@ import { LogOut } from 'pages/Dashboard/components'
 import { MenuBar, UserIcon } from 'components/svgs'
 import { useState } from 'react'
 
-const Menu: React.FC<{ name: string | null }> = (props) => {
+const Menu: React.FC<{
+  name: string | null
+  setToken: (token: string) => void
+}> = (props) => {
   const [show, setShow] = useState(false)
 
   const clickHandler = () => {
@@ -23,7 +26,7 @@ const Menu: React.FC<{ name: string | null }> = (props) => {
                 {props.name}
               </p>
             </div>
-            <LogOut styles='md:hidden' />
+            <LogOut styles='md:hidden' setToken={props.setToken} />
           </div>
         )}
         {show && (

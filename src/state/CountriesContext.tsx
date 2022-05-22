@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { dataType, provider } from 'state/types'
-import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { dataType, provider } from 'state/types'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
 import axios from 'axios'
 
 const schema = [
@@ -28,6 +28,7 @@ export const CountriesContext = React.createContext({
 
 const CountriesProvider: React.FC<provider> = (props) => {
   const [data, setData] = useState<dataType>(schema)
+
   const navigate = useNavigate()
   useEffect(() => {
     const token = localStorage.getItem('token') || props.temporaryToken
@@ -45,7 +46,7 @@ const CountriesProvider: React.FC<provider> = (props) => {
         }
       })
       .catch((error) => {
-        if (error) console.log(`${error.message} 📛!`)
+        if (error) console.log(`${error.message} 📛!  token expired`)
         if (!token) navigate('/', { replace: true })
       })
   }, [])

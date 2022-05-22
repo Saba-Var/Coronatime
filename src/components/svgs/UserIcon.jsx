@@ -1,7 +1,6 @@
 function UserIcon() {
   return (
     <svg
-      class='svg-icon'
       className='h-8 w-8'
       viewBox='0 0 1024 1024'
       version='1.1'
