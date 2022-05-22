@@ -1,25 +1,33 @@
-import { useTranslation } from 'react-i18next'
 import { ArrowDown, ArrowUp } from 'components/svgs'
+import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 
 type propsType = {
-  setTarget: (target: string | null) => void
-  language: { language: any }
-  target: string | null
-  sort?: () => void
   option: string
+  optionTools: {
+    setTarget: (target: string | null) => void
+    language: { language: any }
+    target: string | null
+    sort?: () => void
+  }
 }
 
 const SortOption: React.FC<propsType> = (props) => {
   const { t } = useTranslation()
-  const language = props.language.language
+  const language = props.optionTools.language.language
   const [isClicked, setIsClicked] = useState(false)
   const [sort, setSort] = useState(false)
 
   const clickHandler = (e: React.MouseEvent<HTMLElement>) => {
     setIsClicked(true)
     setSort(!sort)
-    props.setTarget(e.currentTarget.getAttribute('data-id'))
+    props.optionTools.setTarget(e.currentTarget.getAttribute('data-id'))
+  }
+
+  const clickOptions = {
+    sort,
+    isClicked,
+    target: props.optionTools.target === props.option,
   }
 
   return (
@@ -29,7 +37,7 @@ const SortOption: React.FC<propsType> = (props) => {
       className='flex gap-[3px] md:gap-[8px] items-center cursor-pointer'
     >
       <p
-        onClick={props.sort}
+        onClick={props.optionTools.sort}
         className={`text-sm ${
           language === 'ge' && 'text-xs'
         } md:text-sm font-semibold`}
@@ -37,16 +45,8 @@ const SortOption: React.FC<propsType> = (props) => {
         {t(props.option)}
       </p>
       <div className='flex flex-col gap-[3px]'>
-        <ArrowUp
-          sort={sort}
-          isClicked={isClicked}
-          target={props.target === props.option}
-        />
-        <ArrowDown
-          sort={sort}
-          isClicked={isClicked}
-          target={props.target === props.option}
-        />
+        <ArrowUp clickOptions={clickOptions} />
+        <ArrowDown clickOptions={clickOptions} />
       </div>
     </div>
   )
