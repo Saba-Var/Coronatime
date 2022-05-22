@@ -8,6 +8,7 @@ const Header: React.FC<{ user: string }> = (props) => {
   const username = (
     <p className='hidden md:block text-base font-bold pr-4'>{name}</p>
   )
+
   return (
     <div className='border-b-border-gray border-b'>
       <div className='flex  items-center px-4 py-7 md:mx-12 xl:px-28 justify-between'>

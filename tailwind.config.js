@@ -14,9 +14,12 @@ module.exports = {
         'border-gray': '#E6E6E7',
         'link-blue': '#2029F3',
         green: '#0FBA68',
+        greenBG: '#ecf9f3',
         white: '#fff',
         red: '#CC1E1E',
         blue: '#edeefe',
+        yellow: '#EAD621',
+        yellowBG: '#fdfced',
       },
       fontFamily: {
         Inter: ['Inter', 'sans-serif'],

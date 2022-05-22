@@ -39,5 +39,7 @@
   "Worldwide": "Worldwide",
   "By country": "By country",
   "Statistics by country": "Statistics by country",
-  "New cases": "New cases"
+  "New cases": "New cases",
+  "Recovered": "Recovered",
+  "Death": "Death"
 }
