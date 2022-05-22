@@ -31,7 +31,7 @@ const CountriesProvider: React.FC<provider> = (props) => {
 
   const navigate = useNavigate()
   useEffect(() => {
-    const token = localStorage.getItem('token') || props.temporaryToken
+    const token = localStorage.getItem('token')
     axios({
       method: 'get',
       url: 'https://coronatime-api.devtest.ge/api/countries',

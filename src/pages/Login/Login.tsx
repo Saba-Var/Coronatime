@@ -4,9 +4,7 @@ import { Wrapper, Question } from 'components'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 
-const Login: React.FC<{ setUser: any; setToken: (token: string) => void }> = (
-  props
-) => {
+const Login: React.FC<{ setUser: any }> = (props) => {
   const { t } = useTranslation()
   const navigate = useNavigate()
 
@@ -17,7 +15,7 @@ const Login: React.FC<{ setUser: any; setToken: (token: string) => void }> = (
   return (
     <Wrapper title={t('Welcome Back')} details={t('Enter details')}>
       <>
-        <LoginForm setUser={props.setUser} setToken={props.setToken} />
+        <LoginForm setUser={props.setUser} />
         <Question
           question={t('Dont have')}
           action={t('Sign up')}

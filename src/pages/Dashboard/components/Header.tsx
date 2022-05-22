@@ -3,9 +3,7 @@ import { Menu } from 'pages/Dashboard/components'
 import { Logo } from 'components/svgs'
 import { Language } from 'components'
 
-const Header: React.FC<{ user: string; setToken: (token: string) => void }> = (
-  props
-) => {
+const Header: React.FC<{ user: string }> = (props) => {
   const name = localStorage.getItem('Username') || props.user
   const username = (
     <p className='hidden md:block text-base font-bold pr-4'>{name}</p>
@@ -19,8 +17,8 @@ const Header: React.FC<{ user: string; setToken: (token: string) => void }> = (
           <div className='flex gap-4 items-center'>
             {username}
             <div className='hidden md:block h-8 w-[1px] bg-border-gray'></div>
-            <LogOut styles='hidden md:block' setToken={props.setToken} />
-            <Menu name={name} setToken={props.setToken} />
+            <LogOut styles='hidden md:block' />
+            <Menu name={name} />
           </div>
         </div>
       </div>

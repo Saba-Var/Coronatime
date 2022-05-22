@@ -1,4 +1,7 @@
+export { default as RecoveredGraph } from './RecoveredGraph'
 export { default as CorrectIcon } from './CorrectIcon'
+export { default as RisingGraph } from './RisingGraph'
+export { default as DeathGraph } from './DeathGraph'
 export { default as ErrorIcon } from './ErrorIcon'
 export { default as UserIcon } from './UserIcon'
 export { default as MenuBar } from './MenuBar'

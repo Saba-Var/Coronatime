@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 
 type propsType = {
   styles: string
-  setToken: (token: string) => void
 }
 
 const LogOut: React.FC<propsType> = (props) => {
@@ -11,7 +10,6 @@ const LogOut: React.FC<propsType> = (props) => {
 
   const { t } = useTranslation()
   const clickHandler = () => {
-    props.setToken('')
     localStorage.removeItem('token')
     localStorage.removeItem('Username')
     navigate('/', { replace: true })

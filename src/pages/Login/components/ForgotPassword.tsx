@@ -8,7 +8,7 @@ const ForgotPassword: React.FC<{ register?: (name: any) => void }> = (
   const { t } = useTranslation()
   return (
     <div className='flex justify-between mt-6 items-center'>
-      <Remember register={props.register} />
+      <Remember />
       <Link
         to='/Reset-password'
         className='text-link-blue text-sm font-semibold'

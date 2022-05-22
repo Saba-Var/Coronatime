@@ -15,5 +15,4 @@ export type dataType = {
 
 export type provider = {
   children: JSX.Element
-  temporaryToken: string
 }

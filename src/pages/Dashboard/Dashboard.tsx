@@ -4,13 +4,11 @@ import { Outlet } from 'react-router-dom'
 
 const Dashboard: React.FC<{
   user: string
-  token: string
-  setToken: (token: string) => void
 }> = (props) => {
   return (
-    <CountriesProvider temporaryToken={props.token}>
+    <CountriesProvider>
       <div>
-        <Header user={props.user} setToken={props.setToken} />
+        <Header user={props.user} />
         <Outlet />
       </div>
     </CountriesProvider>

@@ -11,24 +11,17 @@ import {
 } from 'pages'
 
 const App = () => {
-  const [token, setToken] = useState<string>('')
   const [user, setUser] = useState<string>('')
 
   return (
     <Router>
       <Routes>
         <Route path='/Sign-up' element={<Signup />} />
-        <Route
-          path='/'
-          element={<Login setUser={setUser} setToken={setToken} />}
-        />
+        <Route path='/' element={<Login setUser={setUser} />} />
         <Route path='/Verify-email' element={<VerifyEmail />} />
         <Route path='/Confirmation-email' element={<ConfirmationEmail />} />
         <Route path='/Confirmed-email' element={<ConfirmedEmail />} />
-        <Route
-          path='/Dashboard'
-          element={<Dashboard user={user} token={token} setToken={setToken} />}
-        >
+        <Route path='/Dashboard' element={<Dashboard user={user} />}>
           <Route path='Worldwide' element={<Worldwide />} />
         </Route>
       </Routes>

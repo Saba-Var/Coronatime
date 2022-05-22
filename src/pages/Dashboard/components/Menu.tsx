@@ -4,7 +4,6 @@ import { useState } from 'react'
 
 const Menu: React.FC<{
   name: string | null
-  setToken: (token: string) => void
 }> = (props) => {
   const [show, setShow] = useState(false)
 
@@ -26,7 +25,7 @@ const Menu: React.FC<{
                 {props.name}
               </p>
             </div>
-            <LogOut styles='md:hidden' setToken={props.setToken} />
+            <LogOut styles='md:hidden' />
           </div>
         )}
         {show && (
