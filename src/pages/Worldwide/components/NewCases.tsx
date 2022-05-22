@@ -14,7 +14,9 @@ function NewCases() {
     <div className='bg-blue w-[343px] mx-auto flex flex-col rounded-2xl h-[193px] items-center justify-between py-6'>
       <img src={Rising} alt='ss' className='w-[90px] h-[64px]' />
       <p>{t('New cases')}</p>
-      <p className='text-2xl text-link-blue font-black'>{confirmed}</p>
+      <p className='text-2xl text-link-blue font-black'>
+        {confirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+      </p>
     </div>
   )
 }
