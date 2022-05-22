@@ -1,9 +1,10 @@
 import { ArrowDown, ArrowUp } from 'components/svgs'
 import { useTranslation } from 'react-i18next'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type propsType = {
   option: string
+  sorter: (sort: boolean) => void
   optionTools: {
     setTarget: (target: string | null) => void
     language: { language: any }
@@ -22,6 +23,7 @@ const SortOption: React.FC<propsType> = (props) => {
     setIsClicked(true)
     setSort(!sort)
     props.optionTools.setTarget(e.currentTarget.getAttribute('data-id'))
+    props.sorter(sort)
   }
 
   const clickOptions = {

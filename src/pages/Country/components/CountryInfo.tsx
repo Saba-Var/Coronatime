@@ -4,11 +4,12 @@ type propsTpe = {
   data: dataType
   language: any
 }
+
 const formatNum = (number: number) => {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
+
 const CountryInfo: React.FC<propsTpe> = (props) => {
-  console.log(props.data)
   return (
     <>
       {props.data.map((el) => (

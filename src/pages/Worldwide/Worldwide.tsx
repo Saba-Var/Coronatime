@@ -26,7 +26,6 @@ const Worldwide = () => {
             target='New cases'
             image={rising}
           />
-
           <StatisticGraph
             containerStyle='bg-greenBG w-[164px] xl:h-[255px]'
             textStye='text-green'
