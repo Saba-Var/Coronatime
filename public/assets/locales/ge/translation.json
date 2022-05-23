@@ -48,5 +48,8 @@
   "Country not found!": "ქვეყანა ვერ მოიძებნა",
   "RESET PASSWORD": "პაროლის შეცვლა",
   "Email Address": "ელ-ფოსტა ვერ მოიძებნა",
-  "New cases": "ახალი შემთხვევა"
+  "New cases": "ახალი შემთხვევა",
+  "Recover password": "პაროლის შეცვლა",
+  "Click Password": "დააჭირეთ ღილაკს რათა შეცვალოთ პაროლი",
+  "RECOVER PASSWORD": "პაროლის შეცვლა"
 }

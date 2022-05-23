@@ -37,7 +37,7 @@ const RecoveryPassword1: React.FC<{}> = (props) => {
       },
       data: JSON.stringify({
         email: watch().Email,
-        backlink: 'http://localhost:3000',
+        backlink: 'http://localhost:3000/Verify-password',
       }),
     })
       .then((res) => {

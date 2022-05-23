@@ -48,5 +48,8 @@
   "Search by country": "Search by country",
   "Country not found!": "Country not found!",
   "RESET PASSWORD": "RESET PASSWORD",
-  "Email Address": "Email address not found"
+  "Email Address": "Email address not found",
+  "Recover password": "Recover password",
+  "Click Password": "click this button to recover a password",
+  "RECOVER PASSWORD": "RECOVER PASSWORD"
 }
