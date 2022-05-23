@@ -1,35 +1,46 @@
+import { SortProps } from 'pages/Country/components/types'
 import { ArrowDown, ArrowUp } from 'components/svgs'
 import { useTranslation } from 'react-i18next'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-type propsType = {
-  option: string
-  sorter: (sort: boolean) => void
-  optionTools: {
-    setTarget: (target: string | null) => void
-    language: { language: any }
-    target: string | null
-    sort?: () => void
-  }
-}
-
-const SortOption: React.FC<propsType> = (props) => {
+const SortOption: React.FC<SortProps> = (props) => {
   const { t } = useTranslation()
-  const language = props.optionTools.language.language
+  const tools = props.optionTools
+  const language = tools.language.language
   const [isClicked, setIsClicked] = useState(false)
   const [sort, setSort] = useState(false)
 
   const clickHandler = (e: React.MouseEvent<HTMLElement>) => {
+    const option = props.option
     setIsClicked(true)
     setSort(!sort)
-    props.optionTools.setTarget(e.currentTarget.getAttribute('data-id'))
-    props.sorter(sort)
+    tools.setTarget(e.currentTarget.getAttribute('data-id'))
+
+    if (option === 'Location') {
+      let languageSort: string
+      language === 'en' ? (languageSort = 'en') : (languageSort = 'ka')
+      tools.setData(
+        tools.data.sort((a: any, b: any) => {
+          return !sort
+            ? b.name[languageSort].localeCompare(a.name[languageSort])
+            : a.name[languageSort].localeCompare(b.name[languageSort])
+        })
+      )
+    } else
+      tools.setData(
+        tools.data.sort((a: any, b: any) => {
+          return !sort
+            ? b.statistics[option] - a.statistics[option]
+            : a.statistics[option] - b.statistics[option]
+        })
+      )
+    tools.forceUpdate()
   }
 
   const clickOptions = {
-    sort,
+    target: tools.target === props.option,
     isClicked,
-    target: props.optionTools.target === props.option,
+    sort,
   }
 
   return (
@@ -39,7 +50,7 @@ const SortOption: React.FC<propsType> = (props) => {
       className='flex gap-[3px] md:gap-[8px] items-center cursor-pointer'
     >
       <p
-        onClick={props.optionTools.sort}
+        onClick={tools.sort}
         className={`text-sm ${
           language === 'ge' && 'text-xs'
         } md:text-sm font-semibold`}

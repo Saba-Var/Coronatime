@@ -42,7 +42,7 @@
   "New cases": "New cases",
   "Death": "Death",
   "Location": "Location",
-  "New Case": "New Cases",
-  "Deaths": "Deaths",
-  "Recovered": "Recovered"
+  "confirmed": "New Cases",
+  "deaths": "Deaths",
+  "recovered": "Recovered"
 }

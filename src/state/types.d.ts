@@ -1,4 +1,4 @@
-export type dataType = {
+export type DataType = {
   name: {
     en: string
     ka: string

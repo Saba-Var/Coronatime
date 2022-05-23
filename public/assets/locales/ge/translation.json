@@ -40,9 +40,8 @@
   "Worldwide": "მსოფლიო",
   "By country": "ქვეყანა",
   "Statistics by country": "სტატისტიკა ქვეყნების მიხედვით",
-  "New case": "შემთხვევები",
-  "Recovered": "გამოჯანმრთელდა",
-  "Death": "სიკვდილიანობა",
-  "Location": "ქვეყანა",
-  "Deaths": "სიკვდილიანობა"
+  "confirmed": "შემთხვევები",
+  "recovered": "გამოჯანმრთელდა",
+  "deaths": "სიკვდილიანობა",
+  "Location": "ქვეყანა"
 }

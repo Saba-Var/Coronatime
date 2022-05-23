@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom'
-import { dataType } from 'state/types'
+import { DataType } from 'state/types'
 import { useEffect } from 'react'
 
 type propsTpe = {
-  data: dataType
+  data: DataType
   language: any
 }
 

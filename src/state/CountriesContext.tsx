@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { dataType, provider } from 'state/types'
+import { DataType, provider } from 'state/types'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import axios from 'axios'
@@ -23,11 +23,11 @@ const schema = [
 
 export const CountriesContext = React.createContext({
   data: schema,
-  setData: (data: dataType) => {},
+  setData: (data: DataType) => {},
 })
 
 const CountriesProvider: React.FC<provider> = (props) => {
-  const [data, setData] = useState<dataType>(schema)
+  const [data, setData] = useState<DataType>(schema)
 
   const navigate = useNavigate()
   useEffect(() => {
