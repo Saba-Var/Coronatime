@@ -4,7 +4,7 @@ import {
   RecoveryPassword1,
   ConfirmationEmail,
   ConfirmedEmail,
-  VerifyPassword,
+  NewPassword,
   VerifyEmail,
   Dashboard,
   Worldwide,
@@ -23,7 +23,7 @@ const App = () => {
         <Route path='/Sign-up' element={<Signup />} />
         <Route path='/' element={<Login setUser={setUser} />} />
         <Route path='/Verify-email' element={<VerifyEmail />} />
-        <Route path='/Verify-password' element={<VerifyPassword />} />
+        <Route path='/Verify-password' element={<NewPassword />} />
         <Route path='/Confirmation-email' element={<ConfirmationEmail />} />
         <Route path='/Confirmed-email' element={<ConfirmedEmail />} />
         <Route
