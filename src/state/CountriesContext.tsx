@@ -24,10 +24,12 @@ const schema = [
 export const CountriesContext = React.createContext({
   data: schema,
   setData: (data: DataType) => {},
+  unMutableData: schema,
 })
 
 const CountriesProvider: React.FC<provider> = (props) => {
   const [data, setData] = useState<DataType>(schema)
+  let unMutableData = [...data]
 
   const navigate = useNavigate()
   useEffect(() => {
@@ -52,7 +54,7 @@ const CountriesProvider: React.FC<provider> = (props) => {
   }, [])
 
   return (
-    <CountriesContext.Provider value={{ data, setData }}>
+    <CountriesContext.Provider value={{ data, setData, unMutableData }}>
       {props.children}
     </CountriesContext.Provider>
   )

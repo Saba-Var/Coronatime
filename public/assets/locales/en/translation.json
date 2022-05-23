@@ -44,5 +44,6 @@
   "Location": "Location",
   "confirmed": "New Cases",
   "deaths": "Deaths",
-  "recovered": "Recovered"
+  "recovered": "Recovered",
+  "Search by country": "Search by country"
 }

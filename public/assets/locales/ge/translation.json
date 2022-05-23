@@ -43,5 +43,6 @@
   "confirmed": "შემთხვევები",
   "recovered": "გამოჯანმრთელდა",
   "deaths": "სიკვდილიანობა",
-  "Location": "ქვეყანა"
+  "Location": "ქვეყანა",
+  "Search by country": "მოძებნეთ ქვეყანა"
 }
