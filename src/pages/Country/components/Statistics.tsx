@@ -1,9 +1,11 @@
 import { SortOption, CountryInfo, Search } from 'pages/Country/components'
 import { StaticsTicsProps } from 'pages/Country/components/types'
+import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 
 const Statistics: React.FC<StaticsTicsProps> = (props) => {
   const [target, setTarget] = useState<string | null>('')
+  const { t } = useTranslation()
 
   const optionTools = {
     forceUpdate: props.forceUpdate,
@@ -15,7 +17,7 @@ const Statistics: React.FC<StaticsTicsProps> = (props) => {
   }
 
   return (
-    <div className='mx-auto md:px-4 md:mx-12 xl:px-28'>
+    <div className='mx-auto md:px-4 md:mx-12 xl:px-28 pb-14'>
       <Search
         setData={props.setData}
         language={props.language}
@@ -28,10 +30,10 @@ const Statistics: React.FC<StaticsTicsProps> = (props) => {
           <SortOption option='deaths' optionTools={optionTools} />
           <SortOption option='recovered' optionTools={optionTools} />
         </div>
-        <div className='h-[400px] lg:h-[500px] xl:h-[590px] overflow-y-scroll rounded-b-lg'>
+        <div className='h-[400px] lg:h-[500px] xl:h-[600px] overflow-y-scroll rounded-b-lg'>
           <CountryInfo data={props.data} language={props.language} />
           {props.data.length === 0 && (
-            <p className='text-lg md:text-2xl pt-[10%] text-red text-center'>
+            <p className='text-lg md:text-2xl pt-[10%] text-gray text-center'>
               Country not found!
             </p>
           )}

@@ -44,5 +44,6 @@
   "recovered": "გამოჯანმრთელდა",
   "deaths": "სიკვდილიანობა",
   "Location": "ქვეყანა",
-  "Search by country": "მოძებნეთ ქვეყანა"
+  "Search by country": "მოძებნეთ ქვეყანა",
+  "Country not found!": "ქვეყანა ვერ მოიძებნა"
 }

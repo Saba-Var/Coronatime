@@ -6,26 +6,34 @@ import { useContext } from 'react'
 
 type SearchProps = {
   setData: (data: DataType) => void
-  language: any
   forceUpdate: () => void
+  language: any
 }
 
 const Search: React.FC<SearchProps> = (props) => {
+  let language: string = 'en'
   const { t } = useTranslation()
   const countriesData = useContext(CountriesContext)?.unMutableData
-
-  let language: string
   props.language.language === 'en' ? (language = 'en') : (language = 'ka')
 
   const onChangeHandler = (e: React.FormEvent<HTMLInputElement>) => {
-    let countryName = e.currentTarget.value.trim().toLowerCase()
+    let countryName = e.currentTarget.value.trim()
+
     props.setData(
-      countriesData.filter((el: any) =>
-        el.name[language].includes(
-          countryName.charAt(0).toUpperCase() + countryName.substring(1)
-        )
-      )
+      countriesData.filter((el: any) => {
+        if (language === 'en')
+          return el.name.en.includes(
+            countryName.charAt(0).toUpperCase() + countryName.substring(1)
+          )
+        else
+          return (
+            el.name.ka.includes(countryName) && el.name.ka[0] === countryName[0]
+          )
+      })
     )
+
+    if (countryName === '') props.setData(countriesData)
+    props.forceUpdate()
   }
 
   return (

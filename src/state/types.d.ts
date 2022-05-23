@@ -3,6 +3,7 @@ export type DataType = {
     en: string
     ka: string
   }
+
   code: string
   _id: string
   statistics: {
