@@ -30,14 +30,14 @@ const Worldwide = () => {
             containerStyle='bg-greenBG w-[164px] xl:h-[255px]'
             textStye='text-green'
             total={totalRecovered}
-            target='Recovered'
+            target='recovered'
             image={recovered}
           />
           <StatisticGraph
             containerStyle='bg-yellowBG w-[164px] xl:h-[255px]'
             textStye='text-yellow'
             total={totalDeath}
-            target='Death'
+            target='deaths'
             image={deathGraph}
           />
         </div>
