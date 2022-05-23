@@ -6,7 +6,7 @@ const ConfirmationEmail = () => {
 
   return (
     <>
-      <Confirmation text={t('Confirm Email')} width='w-82' />
+      <Confirmation text={t('Confirm Email')} />
     </>
   )
 }

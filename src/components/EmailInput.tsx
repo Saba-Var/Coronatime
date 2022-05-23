@@ -14,7 +14,15 @@ const EmailInput: React.FC<EmailProps> = (props) => {
         {...props.register(props.label, {
           required: t('Required'),
           validate: {
-            'email format': (v: any) => v.includes('@') || props.valid,
+            'email format': (v: any) => {
+              return (
+                String(v)
+                  .toLowerCase()
+                  .match(
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                  ) || props.valid
+              )
+            },
           },
         })}
         type='text'

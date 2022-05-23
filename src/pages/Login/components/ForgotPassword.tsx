@@ -10,7 +10,7 @@ const ForgotPassword: React.FC<{ register?: (name: any) => void }> = (
     <div className='flex justify-between mt-6 items-center'>
       <Remember />
       <Link
-        to='/Reset-password'
+        to='/Recovery-Password-email'
         className='text-link-blue text-sm font-semibold'
       >
         {t('Forgot password')}

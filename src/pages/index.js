@@ -1,4 +1,5 @@
 export { default as ConfirmationEmail } from './ConfirmationEmail'
+export { default as RecoveryPassword1 } from './RecoveryPassword1'
 export { default as ConfirmedEmail } from './ConfirmedEmail'
 export { default as VerifyEmail } from './VerifyEmail'
 export { default as Dashboard } from './Dashboard'

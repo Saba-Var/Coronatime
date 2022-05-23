@@ -1,3 +1,4 @@
+export { default as RecoveryWrapper } from './RecoveryWrapper'
 export { default as RepeatPassword } from './RepeatPassword'
 export { default as StatisticGraph } from './StatisticGraph'
 export { default as VerifiedSignIn } from './VerifiedSignIn'

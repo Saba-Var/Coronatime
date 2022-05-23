@@ -1,14 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import {
-  Login,
-  Signup,
+  RecoveryPassword1,
   ConfirmationEmail,
-  VerifyEmail,
   ConfirmedEmail,
+  VerifyEmail,
   Dashboard,
   Worldwide,
   Country,
+  Signup,
+  Login,
 } from 'pages'
 
 const App = () => {
@@ -36,6 +37,10 @@ const App = () => {
           <Route path='Worldwide' element={<Worldwide />} />
           <Route path='By-country' element={<Country />} />
         </Route>
+        <Route
+          path='/Recovery-Password-email'
+          element={<RecoveryPassword1 />}
+        />
       </Routes>
     </Router>
   )

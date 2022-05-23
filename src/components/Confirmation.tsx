@@ -3,16 +3,15 @@ import { Logo } from 'components/svgs'
 
 type PropsType = {
   text: string
-  width: string
 }
 
 const Confirmation: React.FC<PropsType> = (props) => {
   return (
-    <div className={`p-4 mx-auto flex flex-col h-screen ${props.width}`}>
+    <div className='w-[375px] p-4 mx-auto flex flex-col h-screen'>
       <div className='flex sm:justify-center'>
         <Logo />
       </div>
-      <div className='w-72.7 flex flex-col items-center gap-4 h-full justify-center'>
+      <div className='  flex flex-col items-center gap-4 h-full justify-center'>
         <img
           src={completedIcon}
           alt='green complete icon'

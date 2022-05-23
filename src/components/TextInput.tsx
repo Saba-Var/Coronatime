@@ -13,13 +13,25 @@ const TextInput: React.FC<InputFieldProps> = (props) => {
 
   return (
     <div className='flex flex-col gap-2 relative'>
-      <label className='text-black'>{t(props.label)}</label>
+      <label className='text-black font-bold text-sm'>{t(props.label)}</label>
       <input
         {...formState.register(props.label, {
           required: true,
           minLength: {
             value: props.value,
             message: props.message,
+          },
+          validate: {
+            'email format': (v: any) => {
+              if (props.label === 'Email')
+                return (
+                  String(v)
+                    .toLowerCase()
+                    .match(
+                      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                    ) || 'incorrect format'
+                )
+            },
           },
         })}
         type={props.type}

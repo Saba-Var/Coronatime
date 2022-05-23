@@ -1,5 +1,5 @@
 {
-  "Valid email": "Enter valid email address: sabavar@redberry.ge",
+  "Valid email": "Enter valid email address!",
   "Unique Password": "Password should be unique, min 3 symbols",
   "Enter details": "Welcome back! Please enter your details",
   "Username placeholder": "Enter unique username or email",
@@ -46,5 +46,7 @@
   "deaths": "Deaths",
   "recovered": "Recovered",
   "Search by country": "Search by country",
-  "Country not found!": "Country not found!"
+  "Country not found!": "Country not found!",
+  "RESET PASSWORD": "RESET PASSWORD",
+  "Email Address": "Email address not found"
 }
