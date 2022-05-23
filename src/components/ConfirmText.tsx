@@ -1,11 +1,11 @@
 import { dashboard } from 'assets/images'
 
-type propsType = {
+type PropsType = {
   title: string
   action: string
 }
 
-const ConfirmText: React.FC<propsType> = (props) => {
+const ConfirmText: React.FC<PropsType> = (props) => {
   return (
     <div className='flex flex-col gap-14 p-[4%] items-center pb-0'>
       <img

@@ -1,4 +1,4 @@
-export type arrowType = {
+export type ArrowType = {
   clickOptions: {
     isClicked: boolean
     sort: boolean

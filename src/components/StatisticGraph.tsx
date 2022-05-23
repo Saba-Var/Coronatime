@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 
-type propsType = {
+type PropsType = {
   target: string
   image: string
   total: number
@@ -8,7 +8,7 @@ type propsType = {
   containerStyle: string
 }
 
-const StatisticGraph: React.FC<propsType> = (props) => {
+const StatisticGraph: React.FC<PropsType> = (props) => {
   const { t } = useTranslation()
 
   return (

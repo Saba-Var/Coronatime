@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 
-type propsType = {
+type PropsType = {
   styles: string
 }
 
-const LogOut: React.FC<propsType> = (props) => {
+const LogOut: React.FC<PropsType> = (props) => {
   const navigate = useNavigate()
 
   const { t } = useTranslation()

@@ -2,13 +2,13 @@ import { GreenBtn, Language } from 'components'
 import { completedIcon } from 'assets/images'
 import { Logo } from 'components/svgs'
 
-type propsType = {
+type PropsType = {
   onClick?: () => void
   text: string
   btnText: string
 }
 
-const VerifiedSignIn: React.FC<propsType> = (props) => {
+const VerifiedSignIn: React.FC<PropsType> = (props) => {
   return (
     <div className='w-fit flex flex-col justify-between  py-6 pt-10 h-screen px-4 mx-auto md:h-[560px]'>
       <div className='md:mx-auto md:mb-28'>

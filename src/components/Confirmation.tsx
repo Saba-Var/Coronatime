@@ -1,12 +1,12 @@
 import { completedIcon } from 'assets/images'
 import { Logo } from 'components/svgs'
 
-type propsType = {
+type PropsType = {
   text: string
   width: string
 }
 
-const Confirmation: React.FC<propsType> = (props) => {
+const Confirmation: React.FC<PropsType> = (props) => {
   return (
     <div className={`p-4 mx-auto flex flex-col h-screen ${props.width}`}>
       <div className='flex sm:justify-center'>

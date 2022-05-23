@@ -1,4 +1,4 @@
-export type formData = {
+export type FormData = {
   Username: string
   Email: string
   Password: string

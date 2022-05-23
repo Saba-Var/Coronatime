@@ -1,7 +1,7 @@
 import { GreenBtn, TextInput, EmailInput, RepeatPassword } from 'components'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { formData } from 'pages/Signup/types'
+import { FormData } from 'pages/Signup/types'
 import { useForm } from 'react-hook-form'
 import { Remember } from 'components'
 import axios from 'axios'
@@ -26,7 +26,7 @@ function SignupForm() {
 
   const passwordMatch = watch()['Repeat Password'] === watch().Password
 
-  const submitHandler = (data: formData): void => {
+  const submitHandler = (data: FormData): void => {
     if (isValid && passwordMatch) {
       const newUser = JSON.stringify({
         username: data.Username,

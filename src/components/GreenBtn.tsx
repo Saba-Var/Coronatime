@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next'
 
-type propsType = {
+type PropsType = {
   onClick?: () => void
   text: string
 }
 
-const GreenBtn: React.FC<propsType> = (props) => {
+const GreenBtn: React.FC<PropsType> = (props) => {
   const { t } = useTranslation()
 
   return (

@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import axios from 'axios'
 
-type formData = {
+type FormData = {
   Username: string
   Password: string
 }
@@ -31,7 +31,7 @@ const LoginForm: React.FC<{
     },
   })
 
-  const submitHandler = (data: formData): void => {
+  const submitHandler = (data: FormData): void => {
     axios({
       method: 'post',
       url: 'https://coronatime-api.devtest.ge/api/login',

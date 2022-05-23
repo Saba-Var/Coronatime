@@ -1,6 +1,6 @@
-import { arrowType } from 'components/svgs/types'
+import { ArrowType } from 'components/svgs/types'
 
-const ArrowDown: React.FC<arrowType> = (props) => {
+const ArrowDown: React.FC<ArrowType> = (props) => {
   const { isClicked, sort, target } = props.clickOptions
   return (
     <svg

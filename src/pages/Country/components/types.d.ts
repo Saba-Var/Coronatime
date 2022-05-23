@@ -6,7 +6,6 @@ export type StaticsTicsProps = {
 }
 
 export type SortProps = {
-  option: string
   optionTools: {
     setTarget: (target: string | null) => void
     setData: (newState: DataType) => void
@@ -16,4 +15,5 @@ export type SortProps = {
     sort?: () => void
     data: DataType
   }
+  option: string
 }

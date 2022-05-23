@@ -18,9 +18,9 @@ export type InputFieldProps = {
 
 export type ErrMsg = {
   text: string | undefined
+  show: boolean | undefined
   apiError?: boolean
   error?: any
-  show: boolean | undefined
 }
 
 export type EmailProps = {
@@ -34,9 +34,9 @@ export type EmailProps = {
 export type PasswordProps = {
   data: { 'Repeat Password': string; Password: string }
   required: string
+  dirtyFields: any
   register: any
   label: string
   valid: string
   errors: any
-  dirtyFields: any
 }

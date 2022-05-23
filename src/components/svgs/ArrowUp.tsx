@@ -1,4 +1,4 @@
-type propsType = {
+type PropsType = {
   clickOptions: {
     isClicked: boolean
     sort: boolean
@@ -6,7 +6,7 @@ type propsType = {
   }
 }
 
-const ArrowUp: React.FC<propsType> = (props) => {
+const ArrowUp: React.FC<PropsType> = (props) => {
   const { isClicked, sort, target } = props.clickOptions
   return (
     <svg

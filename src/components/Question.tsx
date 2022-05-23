@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 
-type propsType = {
+type PropsType = {
   question: string
   action: string
   link: string
 }
 
-const Question: React.FC<propsType> = (props) => {
+const Question: React.FC<PropsType> = (props) => {
   return (
     <div className='mt-6'>
       <p className='text-gray text-center'>

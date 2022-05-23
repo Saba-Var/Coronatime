@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { DataType } from 'state/types'
 import { useEffect } from 'react'
 
-type propsTpe = {
+type PropsTpe = {
   data: DataType
   language: any
 }
@@ -11,7 +11,7 @@ const formatNum = (number: number) => {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
 
-const CountryInfo: React.FC<propsTpe> = (props) => {
+const CountryInfo: React.FC<PropsTpe> = (props) => {
   const navigate = useNavigate()
 
   useEffect(() => {
