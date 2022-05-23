@@ -1,6 +1,6 @@
 import { SortOption, CountryInfo } from 'pages/Country/components'
 import { dataType } from 'state/types'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type propsType = {
   data: dataType
