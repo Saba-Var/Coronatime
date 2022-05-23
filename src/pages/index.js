@@ -1,3 +1,4 @@
+export { default as PasswordConfirmation } from './PasswordConfirmation'
 export { default as ConfirmationEmail } from './ConfirmationEmail'
 export { default as NewPassword } from './NewPassword/NewPassword'
 export { default as RecoveryPassword1 } from './RecoveryPassword1'

@@ -51,5 +51,6 @@
   "Email Address": "Email address not found",
   "Recover password": "Recover password",
   "Click Password": "click this button to recover a password",
-  "RECOVER PASSWORD": "RECOVER PASSWORD"
+  "RECOVER PASSWORD": "RECOVER PASSWORD",
+  "Password updated": "Your password has been updeted successfully"
 }

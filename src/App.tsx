@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import {
+  PasswordConfirmation,
   RecoveryPassword1,
   ConfirmationEmail,
   ConfirmedEmail,
@@ -25,6 +26,10 @@ const App = () => {
         <Route path='/Verify-email' element={<VerifyEmail />} />
         <Route path='/Verify-password' element={<NewPassword />} />
         <Route path='/Confirmation-email' element={<ConfirmationEmail />} />
+        <Route
+          path='/Password-confirmation'
+          element={<PasswordConfirmation />}
+        />
         <Route path='/Confirmed-email' element={<ConfirmedEmail />} />
         <Route
           path='/Dashboard'
