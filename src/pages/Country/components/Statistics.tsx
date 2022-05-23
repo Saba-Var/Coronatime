@@ -1,11 +1,9 @@
 import { SortOption, CountryInfo, Search } from 'pages/Country/components'
 import { StaticsTicsProps } from 'pages/Country/components/types'
-import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 
 const Statistics: React.FC<StaticsTicsProps> = (props) => {
   const [target, setTarget] = useState<string | null>('')
-  const { t } = useTranslation()
 
   const optionTools = {
     forceUpdate: props.forceUpdate,
