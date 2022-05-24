@@ -4,6 +4,8 @@ module.exports = {
     extend: {
       screens: {
         '1.5xl': '1142px',
+        sd: '420px',
+        sx: '470px',
       },
       animation: {
         'slide-in-top':

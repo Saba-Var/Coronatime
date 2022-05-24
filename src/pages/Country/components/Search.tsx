@@ -37,7 +37,7 @@ const Search: React.FC<SearchProps> = (props) => {
   }
 
   return (
-    <div className='mb-5 h-5 flex gap-2 pl-4 md:px-6 py-4 w-[240px] items-center md:border-[1px] md:h-12 md:rounded-lg md:border-border-gray'>
+    <div className='mb-3 h-5 flex gap-2 pl-4 md:px-6 py-3 w-[240px] items-center md:border-[1px] md:h-11 md:rounded-lg md:border-border-gray'>
       <div>
         <SearchIcon />
       </div>

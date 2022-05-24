@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 const Statistics: React.FC<StaticsTicsProps> = (props) => {
   const [target, setTarget] = useState<string | null>('')
+  const language = props.language.language
 
   const optionTools = {
     forceUpdate: props.forceUpdate,
@@ -15,7 +16,7 @@ const Statistics: React.FC<StaticsTicsProps> = (props) => {
   }
 
   return (
-    <div className='mx-auto md:px-4 md:mx-12 xl:px-28 pb-14'>
+    <div className='mx-auto md:px-4 md:mx-12 xl:px-28 pb-4'>
       <Search
         setData={props.setData}
         language={props.language}
@@ -23,8 +24,8 @@ const Statistics: React.FC<StaticsTicsProps> = (props) => {
       />
       <div className='shadow-lg'>
         <div
-          className={`flex justify-between bg-grayBG h-14 items-center md:px-8 lg:pr-[35%] rounded-t-lg ${
-            props.language.language === 'en' && 'p-2'
+          className={`flex justify-between bg-grayBG h-12 items-center md:px-8 lg:pr-[35%] rounded-t-lg ${
+            language === 'en' && 'p-2'
           }`}
         >
           <SortOption option='Location' optionTools={optionTools} />
@@ -34,8 +35,8 @@ const Statistics: React.FC<StaticsTicsProps> = (props) => {
         </div>
         <div
           className={`${
-            props.language.language === 'en' && 'px-2'
-          } h-fit max-h-[400px] lg:max-h-[500px] xl:max-h-[613px] overflow-y-scroll rounded-b-lg`}
+            language === 'en' && 'px-2'
+          } h-fit max-h-[400px] md:max-h-[55vh]   overflow-y-scroll rounded-b-lg`}
         >
           <CountryInfo data={props.data} language={props.language} />
           {props.data.length === 0 && (

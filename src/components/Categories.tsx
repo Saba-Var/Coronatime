@@ -8,9 +8,9 @@ const Categories: React.FC<{ title: string }> = (props) => {
 
   return (
     <>
-      <div className='px-4 py-7 md:mx-12 xl:px-28 md:mt-10'>
+      <div className='px-4 py-4 md:mx-12 xl:px-28 md:mt-6'>
         <h2 className='text-black font-black text-xl'>{t(props.title)}</h2>
-        <div className='border-b-border-gray border-b flex mt-10 gap-6 pb-4'>
+        <div className='border-b-border-gray border-b flex mt-6 gap-6 pb-4'>
           <Link to='/Dashboard/Worldwide'>
             <p
               className={`cursor-pointer text-base text-black ${

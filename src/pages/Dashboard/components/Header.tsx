@@ -16,7 +16,7 @@ const Header: React.FC<HeaderType> = (props) => {
 
   return (
     <div className='border-b-border-gray border-b'>
-      <div className='flex py-5 items-center px-4 py-b md:mx-12 xl:px-28 justify-between'>
+      <div className='flex py-4 items-center px-4 md:mx-12 xl:px-28 justify-between'>
         <Logo />
         <div className='flex items-center gap-12'>
           <Language setLanguage={props.setLanguage} />
