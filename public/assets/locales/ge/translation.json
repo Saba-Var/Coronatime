@@ -52,5 +52,8 @@
   "Recover password": "პაროლის შეცვლა",
   "Click Password": "დააჭირეთ ღილაკს რათა შეცვალოთ პაროლი",
   "RECOVER PASSWORD": "პაროლის შეცვლა",
-  "Password updated": "თქვენი პაროლი განახლდა წარმატებით"
+  "Password updated": "თქვენი პაროლი განახლდა წარმატებით",
+  "Warning!": "გადრთხილება!",
+  "this username is already taken.": "ეს სახელი უკვე არსებობს",
+  "this email is already taken.": "ეს ელ-ფოსტა უკვე არსებობს"
 }

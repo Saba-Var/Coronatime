@@ -29,6 +29,7 @@ export type EmailProps = {
   label: string
   register: any
   errors: any
+  apiError?: string | boolean
 }
 
 export type PasswordProps = {

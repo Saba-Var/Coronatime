@@ -2,6 +2,49 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      animation: {
+        'slide-in-top':
+          'slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both',
+        'bounce-out-top': 'bounce-out-top 1.5s ease   both',
+        'bounce-out-left': 'bounce-out-left 1.5s ease   both',
+      },
+      keyframes: {
+        'slide-in-top': {
+          '0%': {
+            transform: 'translateY(-1000px)',
+            opacity: '0',
+          },
+          to: {
+            transform: 'translateY(0)',
+            opacity: '1',
+          },
+        },
+        'bounce-out-left': {
+          '0%,15%,38%,70%': {
+            transform: 'translateX(0)',
+            'animation-timing-function': 'ease-out',
+          },
+          '5%': {
+            transform: 'translateX(-30px)',
+            'animation-timing-function': 'ease-in',
+          },
+          '25%': {
+            transform: 'translateX(-38px)',
+            'animation-timing-function': 'ease-in',
+          },
+          '52%': {
+            transform: 'translateX(-80px)',
+            'animation-timing-function': 'ease-in',
+          },
+          '85%': {
+            opacity: '1',
+          },
+          to: {
+            transform: 'translateX(-1000px)',
+            opacity: '0',
+          },
+        },
+      },
       spacing: {
         98: '24.5rem',
         82: '20.5rem',

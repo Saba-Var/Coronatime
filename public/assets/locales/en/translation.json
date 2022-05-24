@@ -52,5 +52,8 @@
   "Recover password": "Recover password",
   "Click Password": "click this button to recover a password",
   "RECOVER PASSWORD": "RECOVER PASSWORD",
-  "Password updated": "Your password has been updeted successfully"
+  "Password updated": "Your password has been updeted successfully",
+  "Warning!": "Warning!",
+  "this username is already taken.": "this username is already taken.",
+  "this email is already taken.": "this email is already taken."
 }
