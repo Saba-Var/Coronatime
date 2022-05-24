@@ -6,7 +6,6 @@ import {
   ConfirmationEmail,
   ConfirmedEmail,
   NewPassword,
-  VerifyEmail,
   Dashboard,
   Worldwide,
   Country,
@@ -23,7 +22,6 @@ const App = () => {
       <Routes>
         <Route path='/Sign-up' element={<Signup />} />
         <Route path='/' element={<Login setUser={setUser} />} />
-        <Route path='/Verify-email' element={<VerifyEmail />} />
         <Route path='/Verify-password' element={<NewPassword />} />
         <Route path='/Confirmation-email' element={<ConfirmationEmail />} />
         <Route

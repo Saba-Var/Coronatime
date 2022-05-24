@@ -7,7 +7,7 @@ function PasswordConfirmation() {
   const { t } = useTranslation()
 
   const clickHandler = () => {
-    navigate('/Sign-up', { replace: true })
+    navigate('/', { replace: true })
   }
 
   return (

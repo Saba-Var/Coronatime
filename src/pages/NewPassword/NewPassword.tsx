@@ -50,7 +50,6 @@ const NewPassword: React.FC<{}> = (props) => {
       }),
     })
       .then((res) => {
-        console.log(res)
         if (res.status === 200) {
           navigate('/Password-confirmation', { replace: true })
         }
