@@ -44,7 +44,7 @@ describe('Dashboard', () => {
       },
     }).then((res) => expect(res.status))
     cy.get("[data-TestId='byCountry']").click()
-    cy.get("[data-TestId='SearchIcon']").type('Pa')
+    cy.get("[data-TestId='SearchIcon']").type('Pa', { force: true }).wait(5000)
     cy.contains('Panama').should('be.visible')
     cy.get("[data-TestId='Language']").select('Georgian')
     cy.get("[data-TestId='SearchIcon']").clear()
@@ -62,5 +62,10 @@ describe('Dashboard', () => {
     cy.contains('Country not found!').should('be.visible')
     cy.get("[data-TestId='Language']").select('Georgian')
     cy.contains('ქვეყანა ვერ მოიძებნა').should('be.visible')
+  })
+
+  it('if country data is not fetched user redirected to worldwide page', () => {
+    cy.get("[data-TestId='byCountry']").click()
+    cy.url().should('include', '/Dashboard/Worldwide')
   })
 })
