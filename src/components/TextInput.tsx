@@ -12,7 +12,7 @@ const TextInput: React.FC<InputFieldProps> = (props) => {
     formState.dirtyFields[props.label] && !error && !formState.apiError
 
   return (
-    <div className='flex flex-col gap-2 relative'>
+    <div className='flex flex-col gap-[2px] relative'>
       <label className='text-black font-bold text-sm'>{t(props.label)}</label>
       <input
         {...formState.register(props.label, {

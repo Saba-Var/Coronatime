@@ -2,6 +2,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      screens: {
+        '1.5xl': '1142px',
+      },
       animation: {
         'slide-in-top':
           'slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both',

@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { FormData } from 'pages/Signup/types'
 import { useForm } from 'react-hook-form'
-import { Remember } from 'components'
 import { useState } from 'react'
 import axios from 'axios'
 import {
@@ -117,7 +116,6 @@ function SignupForm() {
           data={watch()}
         />
       </div>
-      <Remember marginTop='mt-6' />
       <GreenBtn text={t('SIGN UP')} />
     </form>
   )
