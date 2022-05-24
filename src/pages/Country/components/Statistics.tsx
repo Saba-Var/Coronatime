@@ -28,10 +28,10 @@ const Statistics: React.FC<StaticsTicsProps> = (props) => {
           <SortOption option='deaths' optionTools={optionTools} />
           <SortOption option='recovered' optionTools={optionTools} />
         </div>
-        <div className='h-[400px] lg:h-[500px] xl:h-[600px] overflow-y-scroll rounded-b-lg'>
+        <div className='h-fit   max-h-[400px] lg:max-h-[500px] xl:max-h-[600px] overflow-y-scroll rounded-b-lg'>
           <CountryInfo data={props.data} language={props.language} />
           {props.data.length === 0 && (
-            <p className='text-lg md:text-2xl pt-[10%] text-gray text-center'>
+            <p className='text-lg md:text-2xl py-[5%] text-gray text-center'>
               Country not found!
             </p>
           )}
