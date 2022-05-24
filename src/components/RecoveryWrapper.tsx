@@ -2,11 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Logo } from 'components/svgs'
 import { Language } from 'components'
 
-type PropsType = {
-  children: JSX.Element
-}
-
-const RecoveryWrapper: React.FC<PropsType> = (props) => {
+const RecoveryWrapper: React.FC<{ children: JSX.Element }> = (props) => {
   const { t } = useTranslation()
 
   return (

@@ -1,14 +1,7 @@
+import { StatisticsProps } from 'components/types'
 import { useTranslation } from 'react-i18next'
 
-type PropsType = {
-  target: string
-  image: string
-  total: number
-  textStye: string
-  containerStyle: string
-}
-
-const StatisticGraph: React.FC<PropsType> = (props) => {
+const StatisticGraph: React.FC<StatisticsProps> = (props) => {
   const { t } = useTranslation()
 
   return (

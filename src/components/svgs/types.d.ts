@@ -5,3 +5,11 @@ export type ArrowType = {
     target: boolean
   }
 }
+
+export type ArrowUpProps = {
+  clickOptions: {
+    isClicked: boolean
+    target: boolean
+    sort: boolean
+  }
+}

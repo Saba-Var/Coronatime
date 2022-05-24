@@ -1,15 +1,9 @@
 import { Language, WelcomeText } from 'components'
+import { WrapperTypes } from 'components/types'
 import { vaccines } from 'assets/images'
 import { Logo } from 'components/svgs'
 
-type PropsType = {
-  children: JSX.Element
-  details: string
-  title: string
-  page: string
-}
-
-const Wrapper: React.FC<PropsType> = (props) => {
+const Wrapper: React.FC<WrapperTypes> = (props) => {
   return (
     <>
       <div className='lg:flex lg:justify-between'>

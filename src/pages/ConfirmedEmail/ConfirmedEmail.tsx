@@ -5,10 +5,10 @@ import { VerifiedSignIn } from 'components'
 import axios from 'axios'
 
 function ConfirmedEmail() {
-  const navigate = useNavigate()
   const [searchParams] = useSearchParams()
-  const { t } = useTranslation()
   const hash = searchParams.get('hash')
+  const navigate = useNavigate()
+  const { t } = useTranslation()
 
   const onclickHandler = () => {
     axios({

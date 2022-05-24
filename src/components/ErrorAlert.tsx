@@ -1,16 +1,11 @@
 import { ErrorIcon, CloseIcon } from 'components/svgs'
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-
-type ErrorProps = {
-  message: string
-  show: boolean
-  setShowAlert: (boolean: boolean) => void
-}
+import { ErrorProps } from 'components/types'
+import { useState } from 'react'
 
 const ErrorAlert: React.FC<ErrorProps> = (props) => {
-  const { t } = useTranslation()
   const [exit, setExit] = useState<boolean>(false)
+  const { t } = useTranslation()
 
   return (
     <div
