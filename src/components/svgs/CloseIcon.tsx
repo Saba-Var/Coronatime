@@ -1,7 +1,7 @@
 function CloseIcon() {
   return (
     <svg
-      className='fill-current h-6 w-6 text-red-500'
+      className='fill-current h-4 w-4 md:h-6 md:w-6 text-red-500'
       role='button'
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 20 20'
