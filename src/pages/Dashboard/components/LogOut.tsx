@@ -17,6 +17,7 @@ const LogOut: React.FC<PropsType> = (props) => {
 
   return (
     <p
+      data-TestId='LogOut'
       onClick={clickHandler}
       className={`${props.styles} font-medium text-sm cursor-pointer`}
     >

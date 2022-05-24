@@ -1,6 +1,7 @@
 const MenuBar = (props) => {
   return (
     <svg
+      data-TestId='MenuIcon'
       onClick={props.onClick}
       width='18'
       height='16'

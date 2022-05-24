@@ -1,10 +1,12 @@
 import { SortOption, CountryInfo, Search } from 'pages/Country/components'
 import { StaticsTicsProps } from 'pages/Country/components/types'
+import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 
 const Statistics: React.FC<StaticsTicsProps> = (props) => {
   const [target, setTarget] = useState<string | null>('')
   const language = props.language.language
+  const { t } = useTranslation()
 
   const optionTools = {
     forceUpdate: props.forceUpdate,
@@ -41,7 +43,7 @@ const Statistics: React.FC<StaticsTicsProps> = (props) => {
           <CountryInfo data={props.data} language={props.language} />
           {props.data.length === 0 && (
             <p className='text-lg md:text-2xl py-[1%] text-gray text-center'>
-              Country not found!
+              {t('Country not found!')}
             </p>
           )}
         </div>

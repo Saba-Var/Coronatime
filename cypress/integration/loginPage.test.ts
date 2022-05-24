@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
-export {}
 
-describe('welcome page', () => {
+describe('Login page tests', () => {
   beforeEach(() => {
     cy.visit('/')
   })

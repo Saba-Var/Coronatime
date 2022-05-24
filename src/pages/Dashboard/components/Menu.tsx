@@ -16,7 +16,7 @@ const Menu: React.FC<{
       <div className='relative '>
         <MenuBar onClick={clickHandler} />
         {show && (
-          <div className='z-50 md:hidden hover:bg-gray-50 shadow-lg p-4 bg-white absolute left-[-60px] top-5 flex flex-col gap-2'>
+          <div className='z-50 md:hidden hover:bg-gray-50 shadow-lg p-4 bg-white absolute left-[-100px] top-5 flex flex-col gap-2 w-32'>
             <div>
               <div className='flex justify-center'>
                 <UserIcon />
@@ -25,11 +25,14 @@ const Menu: React.FC<{
                 {props.name}
               </p>
             </div>
-            <LogOut styles='md:hidden' />
+            <div className='flex justify-center mx-auto'>
+              <LogOut styles='md:hidden' />
+            </div>
           </div>
         )}
         {show && (
           <div
+            data-TestId='overlay'
             onClick={() => setShow(false)}
             className='fixed w-full h-screen top-0 left-0 md:hidden'
           ></div>

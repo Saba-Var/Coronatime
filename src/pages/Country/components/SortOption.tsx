@@ -45,6 +45,7 @@ const SortOption: React.FC<SortProps> = (props) => {
 
   return (
     <div
+      data-TestId={props.option}
       onClick={clickHandler}
       data-id={props.option}
       className='flex gap-[3px] md:gap-[8px] items-center cursor-pointer'

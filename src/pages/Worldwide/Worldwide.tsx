@@ -1,7 +1,8 @@
+import { rising, recovered, deathGraph } from 'assets/images'
 import { CountriesContext } from 'state/CountriesContext'
 import { StatisticGraph } from 'components'
+import { Link } from 'react-router-dom'
 import { Categories } from 'components'
-import { rising, recovered, deathGraph } from 'assets/images'
 import { useContext } from 'react'
 
 const Worldwide = () => {

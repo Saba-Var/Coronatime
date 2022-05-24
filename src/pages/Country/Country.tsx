@@ -1,8 +1,8 @@
 import { CountriesContext } from 'state/CountriesContext'
 import { Statistics } from 'pages/Country/components'
-import { Categories } from 'components'
-import { useContext, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
+import { useContext, useState } from 'react'
+import { Categories } from 'components'
 import React from 'react'
 
 function Country() {
