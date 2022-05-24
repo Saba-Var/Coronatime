@@ -15,7 +15,7 @@ const Login: React.FC<{ setUser: any }> = (props) => {
   return (
     <Wrapper
       page='login'
-      title={t('Welcome Back')}
+      title={t('Welcome back')}
       details={t('Enter details')}
     >
       <>

@@ -1,7 +1,15 @@
-const WelcomeText: React.FC<{ title: string; details: string }> = (props) => {
+const WelcomeText: React.FC<{
+  title: string
+  details: string
+  page?: string
+}> = (props) => {
   return (
     <>
-      <h2 className='font-black  text-black text-xl mt-8 1.5xl:w-[500px]'>
+      <h2
+        className={`font-black  text-black text-xl mt-8 1.5xl:w-[500px] ${
+          props.page === 'login' && 'text-2xl mb-4'
+        }`}
+      >
         {props.title}
       </h2>
       <p className='text-gray mb-4'>{props.details}</p>
