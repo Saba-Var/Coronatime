@@ -2,6 +2,7 @@ function ErrorIcon() {
   return (
     <div>
       <svg
+        data-TestId='ErrorIcon'
         width='20'
         height='20'
         viewBox='0 0 20 20'

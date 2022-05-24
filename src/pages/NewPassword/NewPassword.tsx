@@ -1,7 +1,7 @@
+import { useSearchParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
-import { useSearchParams } from 'react-router-dom'
 import axios from 'axios'
 import {
   RecoveryWrapper,

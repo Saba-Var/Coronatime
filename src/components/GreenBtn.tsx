@@ -5,6 +5,7 @@ const GreenBtn: React.FC<{ onClick?: () => void; text: string }> = (props) => {
 
   return (
     <button
+      data-TestId='GreenBtn'
       onClick={props.onClick}
       className='bg-green w-full mt-6 rounded-lg h-12 font-black text-white cursor-pointer'
     >

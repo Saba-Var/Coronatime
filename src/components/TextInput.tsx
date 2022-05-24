@@ -15,6 +15,7 @@ const TextInput: React.FC<InputFieldProps> = (props) => {
     <div className='flex flex-col gap-[2px] relative'>
       <label className='text-black font-bold text-sm'>{t(props.label)}</label>
       <input
+        data-TestId={props.label}
         {...formState.register(props.label, {
           required: true,
           minLength: {

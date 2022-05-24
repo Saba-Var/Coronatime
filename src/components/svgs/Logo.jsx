@@ -1,6 +1,7 @@
 function Logo() {
   return (
     <svg
+      data-TestId='Logo'
       width='137'
       height='33'
       className='md:w-42.3 md:h-11'
