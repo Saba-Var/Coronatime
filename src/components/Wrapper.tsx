@@ -6,6 +6,7 @@ type PropsType = {
   children: JSX.Element
   details: string
   title: string
+  page: string
 }
 
 const Wrapper: React.FC<PropsType> = (props) => {
@@ -22,7 +23,9 @@ const Wrapper: React.FC<PropsType> = (props) => {
         </div>
         <img
           src={vaccines}
-          className='hidden lg:block w-[635px]'
+          className={`hidden lg:block w-[635px] ${
+            props.page === 'login' && 'h-screen'
+          }`}
           alt='covid-19 vaccines'
         />
       </div>

@@ -6,7 +6,11 @@ function Signup() {
   const { t } = useTranslation()
 
   return (
-    <Wrapper title={t('Welcome CoronaTime')} details={t('Enter info')}>
+    <Wrapper
+      page='signup'
+      title={t('Welcome CoronaTime')}
+      details={t('Enter info')}
+    >
       <>
         <SignupForm />
         <Question question={t('Have account')} action={t('Sign')} link='/' />

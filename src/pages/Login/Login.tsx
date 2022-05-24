@@ -13,7 +13,11 @@ const Login: React.FC<{ setUser: any }> = (props) => {
   }, [navigate])
 
   return (
-    <Wrapper title={t('Welcome Back')} details={t('Enter details')}>
+    <Wrapper
+      page='login'
+      title={t('Welcome Back')}
+      details={t('Enter details')}
+    >
       <>
         <LoginForm setUser={props.setUser} />
         <Question
