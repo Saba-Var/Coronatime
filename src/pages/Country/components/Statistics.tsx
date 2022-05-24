@@ -22,16 +22,24 @@ const Statistics: React.FC<StaticsTicsProps> = (props) => {
         forceUpdate={props.forceUpdate}
       />
       <div className='shadow-lg'>
-        <div className='flex justify-between bg-grayBG h-14 items-center md:px-8 lg:pr-[35%] rounded-t-lg'>
+        <div
+          className={`flex justify-between bg-grayBG h-14 items-center md:px-8 lg:pr-[35%] rounded-t-lg ${
+            props.language.language === 'en' && 'p-2'
+          }`}
+        >
           <SortOption option='Location' optionTools={optionTools} />
           <SortOption option='confirmed' optionTools={optionTools} />
           <SortOption option='deaths' optionTools={optionTools} />
           <SortOption option='recovered' optionTools={optionTools} />
         </div>
-        <div className='h-fit   max-h-[400px] lg:max-h-[500px] xl:max-h-[600px] overflow-y-scroll rounded-b-lg'>
+        <div
+          className={`${
+            props.language.language === 'en' && 'px-2'
+          } h-fit max-h-[400px] lg:max-h-[500px] xl:max-h-[613px] overflow-y-scroll rounded-b-lg`}
+        >
           <CountryInfo data={props.data} language={props.language} />
           {props.data.length === 0 && (
-            <p className='text-lg md:text-2xl py-[5%] text-gray text-center'>
+            <p className='text-lg md:text-2xl py-[1%] text-gray text-center'>
               Country not found!
             </p>
           )}
