@@ -99,10 +99,9 @@ In order to see coverage of testing go to coverage/lcov-report and open index.ht
 ├─── cypress # project test files
 ├─── readme  # readme assets
 ├─── src     # project source codes
-│    ├── assets      # project images and fonts 
+│    ├── assets      # project images
 │    ├── components  # reusable components
 │    │   └── svgs            # svg components
-│    ├── helper      # helper functions
 │    ├── pages       # project pages
 │    │   ├── ConfirmationEmail
 │    │   │   └── components         # page components
