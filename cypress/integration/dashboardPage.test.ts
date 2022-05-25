@@ -2,7 +2,6 @@
 
 describe('Dashboard', () => {
   beforeEach(() => {
-    cy.clearLocalStorage()
     cy.visit('/')
     cy.LogIn()
   })

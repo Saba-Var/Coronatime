@@ -9,6 +9,7 @@ const ErrorAlert: React.FC<ErrorProps> = (props) => {
 
   return (
     <div
+      data-TestId='Alert'
       className={`px-1 md:text-2xl z-[999999] animate-slide-in-top  bg-red-100 border border-rose-600 text-red-700 md:px-4 py-1 md:py-3 rounded bg-rose-100  fixed top-14 md:top-14 lg:top-16 xl:top-[75px] 2xl:top-[80px]
        ${exit && 'animate-bounce-out-left'}`}
     >

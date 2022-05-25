@@ -54,7 +54,7 @@ function SignupForm() {
         data: newUser,
       })
         .then((res) => {
-          if (res.statusText === 'Created') setShowAlert(false)
+          setShowAlert(false)
           navigate('/Confirmation-email', { replace: true })
         })
         .catch((error) => {

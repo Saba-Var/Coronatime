@@ -70,12 +70,20 @@ describe('Sign up page', () => {
     cy.get("[data-TestId='ErrorIcon']").should('not.be.visible')
   })
 
-  it('show error alert when username and email are taken', () => {
-    cy.intercept('POST', 'https://coronatime-api.devtest.ge/api/register', {
-      statusCode: 201,
-    })
+  it('if inputs are correct send email confirmation to gmail', () => {
     cy.correctSignUp()
+    cy.get("[data-TestId='Username']").clear().type('qqqq', { delay: 200 })
     cy.get("[data-TestId='GreenBtn']").click()
+    cy.get("[data-TestId='Alert']").should('be.visible', { force: true })
+    cy.get("[data-TestId='Username']").clear().type('name', { delay: 200 })
+    cy.get("[data-TestId='Email']")
+      .clear()
+      .type('name@gmail.com', { delay: 200 })
+    cy.intercept('POST', 'https://coronatime-api.devtest.ge/api/register', {
+      statusText: 'Created',
+    })
+    cy.get("[data-TestId='GreenBtn']").click()
+    cy.get("[data-TestId='Alert']").should('not.exist')
     cy.url().should('include', '/Confirmation-email')
     cy.beVisible('We have sent you a confirmation email')
   })
