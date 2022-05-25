@@ -2,6 +2,7 @@
 
 describe('Dashboard', () => {
   beforeEach(() => {
+    cy.clearLocalStorage()
     cy.visit('/')
     cy.LogIn()
   })
@@ -28,6 +29,7 @@ describe('Dashboard', () => {
     cy.openMenu()
     cy.get("[data-TestId='overlay']").click()
     cy.contains('Log Out').should('not.be.visible')
+    cy.get("[data-TestId='overlay']").should('not.exist')
     cy.openMenu()
     cy.get("[data-TestId='LogOut']").click({ multiple: true, force: true })
     cy.url().should('not.include', '/Dashboard/Worldwide')
@@ -44,7 +46,9 @@ describe('Dashboard', () => {
       },
     }).then((res) => expect(res.status))
     cy.get("[data-TestId='byCountry']").click()
-    cy.get("[data-TestId='Search']").type('Pa', { force: true })
+    cy.get("[data-TestId='Search']")
+      .type('Pan', { force: true, delay: 400 })
+      .wait(4000)
     cy.contains('Panama').should('be.visible')
     cy.get("[data-TestId='Language']").select('Georgian')
     cy.get("[data-TestId='Search']").clear()
@@ -68,5 +72,15 @@ describe('Dashboard', () => {
     cy.get("[data-TestId='byCountry']").click()
     cy.get("[data-TestId='Search']").type('mars', { force: true })
     cy.beVisible('Country not found!')
+  })
+
+  it('if there is no token in a localStorage then redirect to login page', () => {
+    cy.intercept('GET', 'https://coronatime-api.devtest.ge/api/countries', {
+      statusCode: 500,
+    })
+    cy.clearLocalStorage()
+    cy.reload()
+    cy.url().should('not.include', '/Dashboard/Worldwide')
+    cy.url().should('not.include', '/Dashboard/By-country')
   })
 })

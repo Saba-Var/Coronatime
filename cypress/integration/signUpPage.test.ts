@@ -16,7 +16,7 @@ describe('Sign up page', () => {
     cy.beVisible('SIGN UP')
     cy.beVisible('English')
     cy.beVisible('Email')
-    cy.get("[data-TestId='Language']").select('Georgian')
+    cy.get("[data-TestId='Language']").select('Georgian', { force: true })
     cy.beVisible('კეთილი იყოს თქვენი მობრძანება კორონათაიმზე')
     cy.beVisible('შეიყვანეთ მოთხოვნილი ინფორმაცია')
     cy.beVisible('უკვე გაქვთ ანგარიში? შესვლა')

@@ -23,7 +23,7 @@ function ConfirmedEmail() {
       },
     })
       .then((res) => {
-        if (res.status === 200) navigate('/', { replace: true })
+        if (res.status === 200) navigate('/Sign-up', { replace: true })
       })
       .catch((error) => {
         if (error) alert(`${error.message} 📛`)

@@ -9,6 +9,7 @@ const Confirmation: React.FC<{ text: string }> = (props) => {
       </div>
       <div className='  flex flex-col items-center gap-4 h-full justify-center'>
         <img
+          data-TestId='completedIcon'
           src={completedIcon}
           alt='green complete icon'
           className='w-14 h-14'

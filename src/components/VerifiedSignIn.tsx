@@ -16,7 +16,12 @@ const VerifiedSignIn: React.FC<PropsType> = (props) => {
       </div>
       <div className='flex flex-col justify-center gap-4'>
         <div className='flex justify-center'>
-          <img src={completedIcon} alt='completion icon' className='w-14' />
+          <img
+            src={completedIcon}
+            alt='completion icon'
+            className='w-14'
+            data-TestId='completedIcon'
+          />
         </div>
         <p className='text-black text-lg text-center'>{props.text}</p>
       </div>
