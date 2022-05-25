@@ -1,4 +1,4 @@
-import { countriesContext } from 'state/countriesContext'
+import { CountriesContext } from 'state/CountriesContext'
 import { Statistics } from 'pages/Country/components'
 import { useOutletContext } from 'react-router-dom'
 import { useContext, useState } from 'react'
@@ -6,7 +6,7 @@ import { Categories } from 'components'
 import React from 'react'
 
 function Country() {
-  const [data, setData] = useState(useContext(countriesContext).data)
+  const [data, setData] = useState(useContext(CountriesContext).data)
   const language = useOutletContext()
   const [, updateState] = useState({})
   const forceUpdate = React.useCallback(() => updateState({}), [])

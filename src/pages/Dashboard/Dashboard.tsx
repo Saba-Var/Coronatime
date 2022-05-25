@@ -1,5 +1,6 @@
-import { countriesContext } from 'state/countriesContext'
-import CountriesProvider from 'state/countriesContext'
+import { CountriesContext } from 'state/CountriesContext'
+import CountriesProvider from 'state/CountriesContext'
+
 import { Header } from 'pages/Dashboard/components'
 import { Outlet } from 'react-router-dom'
 import { useContext } from 'react'
@@ -9,7 +10,7 @@ const Dashboard: React.FC<{
   language: string
   setLanguage: (language: string) => void
 }> = (props) => {
-  const ctx = useContext(countriesContext)
+  const ctx = useContext(CountriesContext)
 
   return (
     <CountriesProvider>
