@@ -1,12 +1,12 @@
 import { rising, recovered, deathGraph } from 'assets/images'
-import { CountriesContext } from 'state/CountriesContext'
+import { countriesContext } from 'state/countriesContext'
 import { StatisticGraph } from 'components'
 import { Link } from 'react-router-dom'
 import { Categories } from 'components'
 import { useContext } from 'react'
 
 const Worldwide = () => {
-  const ctx = useContext(CountriesContext).data
+  const ctx = useContext(countriesContext).data
 
   let totalConfirmed = 0
   let totalRecovered = 0

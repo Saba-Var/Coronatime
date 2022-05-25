@@ -48,15 +48,11 @@ const NewPassword: React.FC<{}> = (props) => {
         password: watch().Password,
         repeatPassword: watch()['Repeat Password'],
       }),
+    }).then((res) => {
+      if (res.status === 200) {
+        navigate('/Password-confirmation', { replace: true })
+      }
     })
-      .then((res) => {
-        if (res.status === 200) {
-          navigate('/Password-confirmation', { replace: true })
-        }
-      })
-      .catch((error) => {
-        if (error) alert(`${error.message} 📛`)
-      })
   }
 
   return (

@@ -21,7 +21,7 @@ const schema = [
   },
 ]
 
-export const CountriesContext = React.createContext({
+export const countriesContext = React.createContext({
   data: schema,
   setData: (data: DataType) => {},
   unMutableData: schema,
@@ -48,15 +48,14 @@ const CountriesProvider: React.FC<provider> = (props) => {
         }
       })
       .catch((error) => {
-        if (error) console.log(`${error.message} 📛!  token expired`)
         if (!token) navigate('/', { replace: true })
       })
   }, [])
 
   return (
-    <CountriesContext.Provider value={{ data, setData, unMutableData }}>
+    <countriesContext.Provider value={{ data, setData, unMutableData }}>
       {props.children}
-    </CountriesContext.Provider>
+    </countriesContext.Provider>
   )
 }
 

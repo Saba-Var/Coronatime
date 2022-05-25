@@ -1,4 +1,4 @@
-import { CountriesContext } from 'state/CountriesContext'
+import { countriesContext } from 'state/countriesContext'
 import { useTranslation } from 'react-i18next'
 import { SearchIcon } from 'components/svgs'
 import { DataType } from 'state/types'
@@ -13,7 +13,7 @@ type SearchProps = {
 const Search: React.FC<SearchProps> = (props) => {
   let language: string = 'en'
   const { t } = useTranslation()
-  const countriesData = useContext(CountriesContext)?.unMutableData
+  const countriesData = useContext(countriesContext)?.unMutableData
   props.language.language === 'en' ? (language = 'en') : (language = 'ka')
 
   const onChangeHandler = (e: React.FormEvent<HTMLInputElement>) => {

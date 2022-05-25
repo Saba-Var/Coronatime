@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import axios from 'axios'
 
-const RecoveryPassword1: React.FC<{}> = (props) => {
+const RecoveryPasswordByEmail: React.FC<{}> = (props) => {
   const [apiError, setApiError] = useState<boolean>(false)
   const navigate = useNavigate()
   const { t } = useTranslation()
@@ -72,4 +72,4 @@ const RecoveryPassword1: React.FC<{}> = (props) => {
   )
 }
 
-export default RecoveryPassword1
+export default RecoveryPasswordByEmail

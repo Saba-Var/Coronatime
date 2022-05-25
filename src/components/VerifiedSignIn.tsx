@@ -25,7 +25,7 @@ const VerifiedSignIn: React.FC<PropsType> = (props) => {
         </div>
         <p className='text-black text-lg text-center'>{props.text}</p>
       </div>
-      <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-4 '>
         <GreenBtn text={props.btnText} onClick={props.onClick} />
         <div className='flex justify-center'>
           <Language />

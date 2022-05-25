@@ -1,7 +1,7 @@
+export { default as RecoveryPasswordByEmail } from './RecoveryPasswordByEmail'
 export { default as PasswordConfirmation } from './PasswordConfirmation'
 export { default as ConfirmationEmail } from './ConfirmationEmail'
 export { default as NewPassword } from './NewPassword/NewPassword'
-export { default as RecoveryPassword1 } from './RecoveryPassword1'
 export { default as ConfirmedEmail } from './ConfirmedEmail'
 export { default as Dashboard } from './Dashboard'
 export { default as Worldwide } from './Worldwide'
