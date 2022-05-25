@@ -14,6 +14,7 @@ const RepeatPassword: React.FC<PasswordProps> = (props) => {
     <div className='flex flex-col gap-[2px] relative'>
       <label className='text-black font-black'>{t(props.label)}</label>
       <input
+        data-TestId={props.label}
         {...props.register(props.label, {
           required: 'Required',
         })}

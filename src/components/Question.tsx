@@ -11,7 +11,11 @@ const Question: React.FC<PropsType> = (props) => {
     <div className='mt-4'>
       <p className='text-gray text-center'>
         {props.question}
-        <Link to={props.link} className='text-black text-sm font-semibold'>
+        <Link
+          data-TestId={'Question'}
+          to={props.link}
+          className='text-black text-sm font-semibold'
+        >
           {' '}
           {props.action}
         </Link>

@@ -42,9 +42,9 @@ const Search: React.FC<SearchProps> = (props) => {
         <SearchIcon />
       </div>
       <input
-        data-TestId='SearchIcon'
+        data-TestId='Search'
         onChange={onChangeHandler}
-        className='text-gray font-medium text-sm w-full h-4 focus:border-0 focus:border-r-transparent outline-none'
+        className=' text-gray font-medium text-sm w-full h-4 focus:border-0 focus:border-r-transparent outline-none'
         placeholder={t('Search by country')}
         type='text'
       />

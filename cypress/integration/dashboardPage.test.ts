@@ -44,10 +44,10 @@ describe('Dashboard', () => {
       },
     }).then((res) => expect(res.status))
     cy.get("[data-TestId='byCountry']").click()
-    cy.get("[data-TestId='SearchIcon']").type('Pa', { force: true }).wait(5000)
+    cy.get("[data-TestId='Search']").type('Pa', { force: true })
     cy.contains('Panama').should('be.visible')
     cy.get("[data-TestId='Language']").select('Georgian')
-    cy.get("[data-TestId='SearchIcon']").clear()
+    cy.get("[data-TestId='Search']").clear()
     cy.contains('ავღანეთი').should('be.visible')
     cy.get("[data-TestId='Location']").click()
     cy.contains('ჰონკონგი').should('be.visible')
@@ -58,14 +58,15 @@ describe('Dashboard', () => {
     cy.get("[data-TestId='Language']").select('ინგლისური')
     cy.get("[data-TestId='recovered']").click()
     cy.contains('Panama').should('be.visible')
-    cy.get("[data-TestId='SearchIcon']").type('!')
+    cy.get("[data-TestId='Search']").type('!')
     cy.contains('Country not found!').should('be.visible')
     cy.get("[data-TestId='Language']").select('Georgian')
     cy.contains('ქვეყანა ვერ მოიძებნა').should('be.visible')
   })
 
-  it('if country data is not fetched user redirected to worldwide page', () => {
+  it('if country name is incorrect show message', () => {
     cy.get("[data-TestId='byCountry']").click()
-    cy.url().should('include', '/Dashboard/Worldwide')
+    cy.get("[data-TestId='Search']").type('mars', { force: true })
+    cy.beVisible('Country not found!')
   })
 })

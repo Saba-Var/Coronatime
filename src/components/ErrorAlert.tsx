@@ -20,6 +20,7 @@ const ErrorAlert: React.FC<ErrorProps> = (props) => {
           <strong className=' font-bold text-red mr-1'>{t('Warning!')}</strong>
           {t(props.message)}
           <span
+            data-TestId='CloseIcon'
             className='ml-1 inline-block'
             onClick={() => {
               setExit(true)

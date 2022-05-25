@@ -1,6 +1,3 @@
-import { CountriesContext } from 'state/CountriesContext'
-import { useNavigate } from 'react-router-dom'
-import { useEffect, useContext } from 'react'
 import { DataType } from 'state/types'
 
 type PropsTpe = {
@@ -13,18 +10,10 @@ const formatNum = (number: number) => {
 }
 
 const CountryInfo: React.FC<PropsTpe> = (props) => {
-  const countriesData = useContext(CountriesContext)?.unMutableData
-  const navigate = useNavigate()
   let language: string
   props.language.language === 'en' ? (language = 'en') : (language = 'ka')
 
   const georgian = language === 'ka'
-
-  useEffect(() => {
-    if (countriesData.length === 1) {
-      navigate('/Dashboard/Worldwide', { replace: true })
-    }
-  }, [countriesData, navigate, props.data.length])
 
   return (
     <>
