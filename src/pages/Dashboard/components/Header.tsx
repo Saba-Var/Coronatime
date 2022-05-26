@@ -4,8 +4,8 @@ import { Logo } from 'components/svgs'
 import { Language } from 'components'
 
 type HeaderType = {
-  user: string
   setLanguage: (language: string) => void
+  user: string
 }
 
 const Header: React.FC<HeaderType> = (props) => {

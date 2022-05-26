@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import axios from 'axios'
 
-const RecoveryPasswordByEmail: React.FC<{}> = (props) => {
+const RecoveryPasswordByEmail = () => {
   const [apiError, setApiError] = useState<boolean>(false)
   const navigate = useNavigate()
   const { t } = useTranslation()

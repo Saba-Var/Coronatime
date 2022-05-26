@@ -6,16 +6,16 @@ describe('Login page tests', () => {
   })
 
   it('user can see all components of Login page', () => {
-    cy.contains('Welcome back! Please enter your details').should('be.visible')
-    cy.contains('Remember this device').should('be.visible')
-    cy.contains('Forgot password?').should('be.visible')
-    cy.contains('Sign up for free').should('be.visible')
+    cy.beVisible('Welcome back! Please enter your details')
+    cy.beVisible('Remember this device')
+    cy.beVisible('Forgot password?')
+    cy.beVisible('Sign up for free')
     cy.get("[data-TestId='Logo']").should('be.visible')
-    cy.contains('Welcome back').should('be.visible')
-    cy.contains('Username').should('be.visible')
-    cy.contains('Password').should('be.visible')
-    cy.contains('English').should('be.visible')
-    cy.contains('LOG IN').should('be.visible')
+    cy.beVisible('Welcome back')
+    cy.beVisible('Username')
+    cy.beVisible('Password')
+    cy.beVisible('English')
+    cy.beVisible('LOG IN')
   })
 
   it('show correct icon when user inputs valid data', () => {
@@ -31,23 +31,21 @@ describe('Login page tests', () => {
     cy.get("[data-TestId='CorrectIcon']").should('not.exist')
     cy.get("[data-TestId='ErrorIcon']").should('be.visible')
     cy.get("[data-TestId='GreenBtn']").click()
-    cy.contains('This field is required').should('be.visible')
+    cy.beVisible('This field is required')
     cy.get("[data-TestId='CorrectIcon']").should('not.exist')
   })
 
   it('show georgian content if user selects georgian language', () => {
     cy.get("[data-TestId='Language']").select('Georgian', { force: true })
-    cy.contains('კეთილი იყოს თქვენი მობრძანება').should('be.visible')
-    cy.contains('არ გაქვთ აგარიში? დარეგისტრირდი უფასოდ').should('be.visible')
-    cy.contains('დაიმახსოვრეთ მოწყობილობა').should('be.visible')
-    cy.contains('დაგავიწყდათ პაროლი?').should('be.visible')
-    cy.contains('ქართული').should('be.visible')
-    cy.contains('პაროლი').should('be.visible')
-    cy.contains('სახელი').should('be.visible')
-    cy.contains('შესვლა').should('be.visible')
-    cy.contains(
-      'კეთილი იყოს თქვენი მობრძანება! გთხოვთ შეიყვანეთ მონაცემები'
-    ).should('be.visible')
+    cy.beVisible('კეთილი იყოს თქვენი მობრძანება')
+    cy.beVisible('არ გაქვთ აგარიში? დარეგისტრირდი უფასოდ')
+    cy.beVisible('დაიმახსოვრეთ მოწყობილობა')
+    cy.beVisible('დაგავიწყდათ პაროლი?')
+    cy.beVisible('ქართული')
+    cy.beVisible('პაროლი')
+    cy.beVisible('სახელი')
+    cy.beVisible('შესვლა')
+    cy.beVisible('კეთილი იყოს თქვენი მობრძანება! გთხოვთ შეიყვანეთ მონაცემები')
   })
 
   it('when georgian language is selected show georgian error messages', () => {
@@ -55,10 +53,10 @@ describe('Login page tests', () => {
     cy.get("[data-TestId='GreenBtn']").click()
     cy.get("[data-TestId='ErrorIcon']").should('be.visible')
     cy.get("[data-TestId='CorrectIcon']").should('not.exist')
-    cy.contains('ამ ველის შევსება სავალდებულოა').should('be.visible')
-    cy.contains(
+    cy.beVisible('ამ ველის შევსება სავალდებულოა')
+    cy.beVisible(
       'მომხმარებლის სახელი უნდა იყოს უნიკალური, უნდა შედგებოდეს მინ 3 სიმბოლოსგან'
-    ).should('be.visible')
+    )
   })
 
   it('if user log in with unregistered username and password then show error', () => {
@@ -67,8 +65,8 @@ describe('Login page tests', () => {
     cy.get("[data-TestId='ErrorIcon']").should('not.exist')
     cy.get("[data-TestId='Password']").type('Saba', { force: true })
     cy.get("[data-TestId='GreenBtn']").click()
-    cy.contains('Name not found').should('be.visible')
-    cy.contains('Password did not match').should('be.visible')
+    cy.beVisible('Name not found')
+    cy.beVisible('Password did not match')
     cy.get("[data-TestId='ErrorIcon']").should('be.visible')
     expect(localStorage.getItem('token'))
   })

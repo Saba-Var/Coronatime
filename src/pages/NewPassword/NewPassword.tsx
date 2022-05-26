@@ -49,9 +49,8 @@ const NewPassword: React.FC<{}> = (props) => {
         repeatPassword: watch()['Repeat Password'],
       }),
     }).then((res) => {
-      if (res.status === 200) {
+      if (res.status === 200)
         navigate('/Password-confirmation', { replace: true })
-      }
     })
   }
 

@@ -1,14 +1,13 @@
 import { CountriesContext } from 'state/CountriesContext'
 import CountriesProvider from 'state/CountriesContext'
-
 import { Header } from 'pages/Dashboard/components'
 import { Outlet } from 'react-router-dom'
 import { useContext } from 'react'
 
 const Dashboard: React.FC<{
-  user: string
-  language: string
   setLanguage: (language: string) => void
+  language: string
+  user: string
 }> = (props) => {
   const ctx = useContext(CountriesContext)
 

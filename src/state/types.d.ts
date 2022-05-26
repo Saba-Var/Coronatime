@@ -7,13 +7,13 @@ export type DataType = {
   code: string
   _id: string
   statistics: {
+    recovered: number
     confirmed: number
     critical: number
     deaths: number
-    recovered: number
   }
 }[]
 
-export type provider = {
+export type Provider = {
   children: JSX.Element
 }

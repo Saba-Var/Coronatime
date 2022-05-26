@@ -6,10 +6,7 @@ const Menu: React.FC<{
   name: string | null
 }> = (props) => {
   const [show, setShow] = useState(false)
-
-  const clickHandler = () => {
-    setShow(!show)
-  }
+  const clickHandler = () => setShow(!show)
 
   return (
     <>

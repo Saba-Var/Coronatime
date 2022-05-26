@@ -1,14 +1,11 @@
 import { useTranslation } from 'react-i18next'
-import { VerifiedSignIn } from 'components'
 import { useNavigate } from 'react-router-dom'
+import { VerifiedSignIn } from 'components'
 
 function PasswordConfirmation() {
   const navigate = useNavigate()
   const { t } = useTranslation()
-
-  const clickHandler = () => {
-    navigate('/', { replace: true })
-  }
+  const clickHandler = () => navigate('/', { replace: true })
 
   return (
     <>

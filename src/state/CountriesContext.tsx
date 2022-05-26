@@ -1,5 +1,5 @@
+import { DataType, Provider } from 'state/types'
 import { useNavigate } from 'react-router-dom'
-import { DataType, provider } from 'state/types'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import axios from 'axios'
@@ -27,7 +27,7 @@ export const CountriesContext = React.createContext({
   unMutableData: schema,
 })
 
-const CountriesProvider: React.FC<provider> = (props) => {
+const CountriesProvider: React.FC<Provider> = (props) => {
   const [data, setData] = useState<DataType>(schema)
   let unMutableData = [...data]
 
@@ -43,13 +43,9 @@ const CountriesProvider: React.FC<provider> = (props) => {
       },
     })
       .then((res) => {
-        if (res.status === 200) {
-          setData(res.data)
-        }
+        if (res.status === 200) setData(res.data)
       })
-      .catch((error) => {
-        if (!token) navigate('/', { replace: true })
-      })
+      .catch((error) => !token && navigate('/', { replace: true }))
   }, [])
 
   return (
