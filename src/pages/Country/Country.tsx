@@ -8,8 +8,8 @@ import React from 'react'
 function Country() {
   const [data, setData] = useState(useContext(CountriesContext).data)
   const language = useOutletContext()
-  const [, updateState] = useState({})
-  const forceUpdate = React.useCallback(() => updateState({}), [])
+  const [newState, setNewState] = useState({})
+  const forceUpdate = React.useCallback(() => setNewState(newState), [newState])
 
   return (
     <div className='h-screen'>
