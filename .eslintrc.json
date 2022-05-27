@@ -3,6 +3,7 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "cypress/no-unnecessary-waits": "off"
+    "cypress/no-unnecessary-waits": "off",
+    "@typescript-eslint/no-unused-vars": "error"
   }
 }

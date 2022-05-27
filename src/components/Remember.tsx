@@ -9,7 +9,10 @@ const Remember: React.FC<{
     <label
       className={`flex items-center gap-2 ${props.marginTop} font-semibold`}
     >
-      <input type='checkbox' className='accent-green' />
+      <input
+        type='checkbox'
+        className='w-5 h-5 rounded focus:ring-transparent outline-none border-border-gray text-green'
+      />
       <span>{t('Remember device')}</span>
     </label>
   )
