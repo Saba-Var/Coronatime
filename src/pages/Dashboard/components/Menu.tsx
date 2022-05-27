@@ -10,10 +10,10 @@ const Menu: React.FC<{
 
   return (
     <>
-      <div className='relative '>
+      <div className='relative'>
         <MenuBar onClick={clickHandler} />
         {show && (
-          <div className='z-50 md:hidden hover:bg-gray-50 shadow-lg p-4 bg-white absolute left-[-100px] top-5 flex flex-col gap-2 w-32'>
+          <div className='z-50 md:hidden hover:bg-gray-50 shadow-lg p-4 bg-white absolute left-[-100px] top-5 flex flex-col gap-2 w-32 rounded-2xl'>
             <div>
               <div className='flex justify-center'>
                 <UserIcon />
