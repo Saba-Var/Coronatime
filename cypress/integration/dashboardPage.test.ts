@@ -45,6 +45,7 @@ describe('Dashboard', () => {
       },
     }).then((res) => expect(res.status))
     cy.get("[data-TestId='byCountry']").click()
+    // eslint-disable-next-line cypress/no-unnecessary-waiting
     cy.get("[data-TestId='Search']")
       .type('Pan', { force: true, delay: 400 })
       .wait(4000)

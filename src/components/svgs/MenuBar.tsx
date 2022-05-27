@@ -1,4 +1,4 @@
-const MenuBar = (props) => {
+const MenuBar: React.FC<{ onClick: () => void }> = (props) => {
   return (
     <svg
       data-TestId='MenuIcon'
