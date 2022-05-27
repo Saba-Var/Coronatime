@@ -1,7 +1,8 @@
+import { LogOutProps } from 'pages/Dashboard/components/types'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 
-const LogOut: React.FC<{ styles: string }> = (props) => {
+const LogOut: React.FC<LogOutProps> = (props) => {
   const navigate = useNavigate()
 
   const { t } = useTranslation()

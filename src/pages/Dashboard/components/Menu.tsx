@@ -1,10 +1,9 @@
+import { MenuProps } from 'pages/Dashboard/components/types'
 import { LogOut } from 'pages/Dashboard/components'
 import { MenuBar, UserIcon } from 'components/svgs'
 import { useState } from 'react'
 
-const Menu: React.FC<{
-  name: string | null
-}> = (props) => {
+const Menu: React.FC<MenuProps> = (props) => {
   const [show, setShow] = useState(false)
   const clickHandler = () => setShow(!show)
 

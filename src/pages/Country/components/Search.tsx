@@ -1,14 +1,8 @@
+import { SearchProps } from 'pages/Country/components/types'
 import { useTranslation } from 'react-i18next'
 import { SearchIcon } from 'components/svgs'
 import { CountriesContext } from 'state'
-import { DataType } from 'state/types'
 import { useContext } from 'react'
-
-type SearchProps = {
-  setData: (data: DataType) => void
-  forceUpdate: () => void
-  language: any
-}
 
 const Search: React.FC<SearchProps> = (props) => {
   let language: string = 'en'

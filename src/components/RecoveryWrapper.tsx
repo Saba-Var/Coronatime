@@ -1,7 +1,8 @@
+import { ChildrenProps } from 'components/types'
 import { useTranslation } from 'react-i18next'
 import { Logo } from 'components/svgs'
 
-const RecoveryWrapper: React.FC<{ children: JSX.Element }> = (props) => {
+const RecoveryWrapper: React.FC<ChildrenProps> = (props) => {
   const { t } = useTranslation()
 
   return (

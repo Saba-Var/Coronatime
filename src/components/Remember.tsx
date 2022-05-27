@@ -1,8 +1,7 @@
 import { useTranslation } from 'react-i18next'
+import { RememberProps } from 'components/types'
 
-const Remember: React.FC<{
-  marginTop?: string
-}> = (props) => {
+const Remember: React.FC<RememberProps> = (props) => {
   const { t } = useTranslation()
 
   return (

@@ -26,7 +26,7 @@ export type InputFieldProps = {
   }
 }
 
-export type WrapperTypes = {
+export type WrapperProps = {
   children: JSX.Element
   details: string
   title: string
@@ -61,4 +61,43 @@ export type ErrorProps = {
   setShowAlert: (boolean: boolean) => void
   message: string
   show: boolean
+}
+
+export type GreenBtnProps = {
+  onClick?: () => void
+  text: string
+}
+
+export type CategoriesProps = {
+  title: string
+}
+
+export type LanguageProps = {
+  setLanguage?: (language: string) => void
+}
+
+export type QuestionProps = {
+  question: string
+  action: string
+  link: string
+}
+
+export type ChildrenProps = {
+  children: JSX.Element
+}
+
+export type RememberProps = {
+  marginTop?: string
+}
+
+export type VerifiedSignInProps = {
+  onClick?: () => void
+  text: string
+  btnText: string
+}
+
+export type WelcomeTextProps = {
+  title: string
+  details: string
+  page?: string
 }

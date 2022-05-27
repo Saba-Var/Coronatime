@@ -1,9 +1,9 @@
 import { Language, WelcomeText } from 'components'
-import { WrapperTypes } from 'components/types'
+import { WrapperProps } from 'components/types'
 import { vaccines } from 'assets/images'
 import { Logo } from 'components/svgs'
 
-const Wrapper: React.FC<WrapperTypes> = (props) => {
+const Wrapper: React.FC<WrapperProps> = (props) => {
   return (
     <>
       <div className='lg:flex lg:justify-between h-screen overflow-hidden lg:pl-[7%]'>

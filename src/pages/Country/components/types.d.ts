@@ -17,3 +17,14 @@ export type SortProps = {
   }
   option: string
 }
+
+export type CountryInfoProps = {
+  data: DataType
+  language: any
+}
+
+export type SearchProps = {
+  setData: (data: DataType) => void
+  forceUpdate: () => void
+  language: any
+}

@@ -1,4 +1,5 @@
 import { ForgotPassword } from 'pages/Login/components'
+import { FormData, LoginFormProps } from 'pages/Login/components/types'
 import { TextInput, GreenBtn } from 'components'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -6,14 +7,7 @@ import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import axios from 'axios'
 
-type FormData = {
-  Username: string
-  Password: string
-}
-
-const LoginForm: React.FC<{
-  setUser: any
-}> = (props) => {
+const LoginForm: React.FC<LoginFormProps> = (props) => {
   const navigate = useNavigate()
   const { t } = useTranslation()
   const [apiError, setApiError] = useState<boolean>(false)

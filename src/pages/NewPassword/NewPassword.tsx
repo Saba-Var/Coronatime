@@ -11,7 +11,7 @@ import {
   RepeatPassword,
 } from 'components'
 
-const NewPassword: React.FC<{}> = (props) => {
+const NewPassword = () => {
   const [searchParams] = useSearchParams()
   const hash = searchParams.get('hash')
   const navigate = useNavigate()

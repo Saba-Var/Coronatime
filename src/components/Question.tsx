@@ -1,12 +1,7 @@
+import { QuestionProps } from 'components/types'
 import { Link } from 'react-router-dom'
 
-type PropsType = {
-  question: string
-  action: string
-  link: string
-}
-
-const Question: React.FC<PropsType> = (props) => {
+const Question: React.FC<QuestionProps> = (props) => {
   return (
     <div className='mt-4'>
       <p className='text-gray text-center'>

@@ -1,8 +1,6 @@
-const WelcomeText: React.FC<{
-  title: string
-  details: string
-  page?: string
-}> = (props) => {
+import { WelcomeTextProps } from 'components/types'
+
+const WelcomeText: React.FC<WelcomeTextProps> = (props) => {
   return (
     <>
       <h2

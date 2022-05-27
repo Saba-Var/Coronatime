@@ -1,10 +1,9 @@
+import { LanguageProps } from 'components/types'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
 import i18n from 'i18next'
 
-const Language: React.FC<{ setLanguage?: (language: string) => void }> = (
-  props
-) => {
+const Language: React.FC<LanguageProps> = (props) => {
   const [language, setLanguage] = useState<string>('en')
   const { t } = useTranslation()
   const changeLanguage = props.setLanguage

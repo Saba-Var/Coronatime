@@ -12,7 +12,7 @@ import {
   RepeatPassword,
 } from 'components'
 
-function SignupForm() {
+const SignupForm = () => {
   const { t } = useTranslation()
   let navigate = useNavigate()
   const [showAlert, setShowAlert] = useState<boolean>(false)

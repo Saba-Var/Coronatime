@@ -1,15 +1,10 @@
-import { DataType } from 'state/types'
-
-type PropsTpe = {
-  data: DataType
-  language: any
-}
+import { CountryInfoProps } from 'pages/Country/components/types'
 
 const formatNum = (number: number) => {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 }
 
-const CountryInfo: React.FC<PropsTpe> = (props) => {
+const CountryInfo: React.FC<CountryInfoProps> = (props) => {
   let language: string
   props.language.language === 'en' ? (language = 'en') : (language = 'ka')
 
@@ -17,7 +12,7 @@ const CountryInfo: React.FC<PropsTpe> = (props) => {
 
   return (
     <>
-      {props.data.map((el) => (
+      {props.data.map((el: any) => (
         <div
           key={el.name.en}
           className={`flex h-16 sd:h-14 items-center cursor-pointer justify-between md:px-6 md:pr-8 lg:pr-[35.6%] xl:pr-[35.5%] 2xl:pr-[34.7%] border-b border-border-gray  ${

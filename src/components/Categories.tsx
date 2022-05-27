@@ -1,7 +1,8 @@
+import { CategoriesProps } from 'components/types'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-const Categories: React.FC<{ title: string }> = (props) => {
+const Categories: React.FC<CategoriesProps> = (props) => {
   const { t } = useTranslation()
   const selected =
     'font-bold underline decoration-neutral-900 underline-offset-[19px] decoration-[3px]'

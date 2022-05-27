@@ -1,13 +1,9 @@
+import { HeaderProps } from 'pages/Dashboard/components/types'
 import { LogOut, Menu } from 'pages/Dashboard/components'
 import { Logo } from 'components/svgs'
 import { Language } from 'components'
 
-type HeaderType = {
-  setLanguage: (language: string) => void
-  user: string
-}
-
-const Header: React.FC<HeaderType> = (props) => {
+const Header: React.FC<HeaderProps> = (props) => {
   const name = localStorage.getItem('Username') || props.user
   const username = (
     <p className='hidden md:block text-base font-bold pr-4'>{name}</p>

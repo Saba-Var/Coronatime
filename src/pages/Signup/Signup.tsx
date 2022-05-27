@@ -2,7 +2,7 @@ import SignupForm from './components/SignupForm'
 import { useTranslation } from 'react-i18next'
 import { Wrapper, Question } from 'components'
 
-function Signup() {
+const Signup = () => {
   const { t } = useTranslation()
 
   return (
