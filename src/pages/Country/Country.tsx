@@ -12,7 +12,7 @@ function Country() {
   const forceUpdate = React.useCallback(() => updateState({}), [])
 
   return (
-    <>
+    <div className='h-screen'>
       <Categories title='Statistics by country' />
       <Statistics
         data={data}
@@ -20,7 +20,7 @@ function Country() {
         setData={setData}
         forceUpdate={forceUpdate}
       />
-    </>
+    </div>
   )
 }
 

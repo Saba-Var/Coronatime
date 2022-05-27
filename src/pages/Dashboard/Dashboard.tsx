@@ -12,7 +12,7 @@ const Dashboard: React.FC<{
 
   return (
     <CountriesProvider>
-      <div>
+      <div className='h-screen !overflow-y-hidden'>
         <Header user={props.user} setLanguage={props.setLanguage} />
         <Outlet context={{ language: props.language, ctx }} />
       </div>

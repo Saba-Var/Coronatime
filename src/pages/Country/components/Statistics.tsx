@@ -18,7 +18,7 @@ const Statistics: React.FC<StaticsTicsProps> = (props) => {
   }
 
   return (
-    <div className='mx-auto md:px-4 md:mx-12 xl:px-28 pb-4'>
+    <div className='mx-auto md:mx-12 xl:px-28'>
       <Search
         setData={props.setData}
         language={props.language}
@@ -38,7 +38,7 @@ const Statistics: React.FC<StaticsTicsProps> = (props) => {
         <div
           className={`${
             language === 'en' && 'px-2'
-          } h-fit max-h-[400px] md:max-h-[55vh]   overflow-y-scroll rounded-b-lg`}
+          } overflow-y-scroll  max-h-[70vh] md:max-h-[65vh]  lg:max-h-[70vh] rounded-b-lg`}
         >
           <CountryInfo data={props.data} language={props.language} />
           {props.data.length === 0 && (
