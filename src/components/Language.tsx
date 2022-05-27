@@ -7,11 +7,12 @@ const Language: React.FC<{ setLanguage?: (language: string) => void }> = (
 ) => {
   const [language, setLanguage] = useState<string>('en')
   const { t } = useTranslation()
+  const changeLanguage = props.setLanguage
 
   useEffect(() => {
     i18n.changeLanguage(language)
-    if (props.setLanguage) props.setLanguage(language)
-  }, [language, props])
+    if (changeLanguage) changeLanguage(language)
+  }, [changeLanguage, language])
 
   return (
     <div>
