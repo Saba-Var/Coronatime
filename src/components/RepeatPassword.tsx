@@ -11,7 +11,7 @@ const RepeatPassword: React.FC<PasswordProps> = (props) => {
   const isCorrect = !match && !required && props.dirtyFields['Repeat Password']
 
   return (
-    <div className='flex flex-col gap-[2px] relative'>
+    <div className='flex flex-col gap-[2px] relative h-[100px]'>
       <label className='text-black font-black'>{t(props.label)}</label>
       <input
         data-TestId={props.label}

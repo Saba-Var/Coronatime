@@ -8,7 +8,7 @@ const EmailInput: React.FC<EmailProps> = (props) => {
   const { t } = useTranslation()
   console.log(props.errors)
   return (
-    <div className='flex flex-col gap-[2px] relative'>
+    <div className='flex flex-col gap-[2px] relative h-[100px]'>
       <label className='text-black font-black'>{t(props.label)}</label>
       <input
         data-TestId={props.label}
