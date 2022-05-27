@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 
 const Categories: React.FC<CategoriesProps> = (props) => {
   const { t } = useTranslation()
-  const selected =
-    'font-bold underline decoration-neutral-900 underline-offset-[19px] decoration-[3px]'
 
   return (
     <>
@@ -15,7 +13,7 @@ const Categories: React.FC<CategoriesProps> = (props) => {
           <Link to='/Dashboard/Worldwide' data-TestId='Worldwide'>
             <p
               className={`cursor-pointer text-base text-black ${
-                props.title === 'Worldwide' && selected
+                props.title === 'Worldwide' && 'selected'
               }`}
             >
               {t('Worldwide')}
@@ -24,7 +22,7 @@ const Categories: React.FC<CategoriesProps> = (props) => {
           <Link to='/Dashboard/By-country' data-TestId='byCountry'>
             <p
               className={`cursor-pointer text-base text-black ${
-                props.title === 'Statistics by country' && selected
+                props.title === 'Statistics by country' && 'selected'
               }`}
             >
               {t('By country')}

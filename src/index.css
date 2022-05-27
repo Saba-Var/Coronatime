@@ -8,4 +8,8 @@
   html {
     @apply font-Inter;
   }
+
+  .selected {
+    @apply font-bold underline decoration-neutral-900 underline-offset-[19px] decoration-[3px];
+  }
 }
