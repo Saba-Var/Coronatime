@@ -1,11 +1,11 @@
-import { LoginForm } from 'pages/Login/components'
+import { LogInForm } from 'pages/LogIn/components'
 import { useTranslation } from 'react-i18next'
 import { Wrapper, Question } from 'components'
 import { useNavigate } from 'react-router-dom'
-import { LogInProps } from 'pages/Login/types'
+import { LogInProps } from 'pages/LogIn/types'
 import { useEffect } from 'react'
 
-const Login: React.FC<LogInProps> = (props) => {
+const LogIn: React.FC<LogInProps> = (props) => {
   const { t } = useTranslation()
   const navigate = useNavigate()
 
@@ -15,12 +15,12 @@ const Login: React.FC<LogInProps> = (props) => {
 
   return (
     <Wrapper
-      page='login'
+      page='LogIn'
       title={t('Welcome back')}
       details={t('Enter details')}
     >
       <>
-        <LoginForm setUser={props.setUser} />
+        <LogInForm setUser={props.setUser} />
         <Question
           question={t('Dont have')}
           action={t('Sign up')}
@@ -31,4 +31,4 @@ const Login: React.FC<LogInProps> = (props) => {
   )
 }
 
-export default Login
+export default LogIn

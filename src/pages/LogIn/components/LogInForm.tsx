@@ -1,5 +1,5 @@
-import { ForgotPassword } from 'pages/Login/components'
-import { FormData, LoginFormProps } from 'pages/Login/components/types'
+import { ForgotPassword } from 'pages/LogIn/components'
+import { FormData, LogInFormProps } from 'pages/LogIn/components/types'
 import { TextInput, GreenBtn } from 'components'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import axios from 'axios'
 
-const LoginForm: React.FC<LoginFormProps> = (props) => {
+const LogInForm: React.FC<LogInFormProps> = (props) => {
   const navigate = useNavigate()
   const { t } = useTranslation()
   const [apiError, setApiError] = useState<boolean>(false)
@@ -29,7 +29,7 @@ const LoginForm: React.FC<LoginFormProps> = (props) => {
     try {
       let response = await axios({
         method: 'post',
-        url: 'https://coronatime-api.devtest.ge/api/login',
+        url: 'https://coronatime-api.devtest.ge/api/LogIn',
         headers: {
           'Content-Type': 'application/json',
           accept: 'application/json',
@@ -85,4 +85,4 @@ const LoginForm: React.FC<LoginFormProps> = (props) => {
   )
 }
 
-export default LoginForm
+export default LogInForm

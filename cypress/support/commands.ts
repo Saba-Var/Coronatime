@@ -22,7 +22,7 @@ Cypress.Commands.add('beVisible', (v) => {
   cy.contains(v).should('be.visible', { force: true })
 })
 
-Cypress.Commands.add('signUpErrors', () => {
+Cypress.Commands.add('SignUpErrors', () => {
   cy.get("[data-TestId='Username']").type('sa')
   cy.get("[data-TestId='ErrorIcon']").should('be.visible')
   cy.get("[data-TestId='Email']").type('sabavar@redberry.!!')

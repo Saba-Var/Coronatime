@@ -111,7 +111,7 @@ In order to see coverage of testing go to coverage/lcov-report and open index.ht
 │    │   │   └── components         # page components
 │    │   ├── Dashboard
 │    │   │   └── components         # page components
-│    │   ├── Login
+│    │   ├── LogIn
 │    │   │   └── components         # page components
 │    │   ├── NewPassword
 │    │   │   └── components         # page components
@@ -119,7 +119,7 @@ In order to see coverage of testing go to coverage/lcov-report and open index.ht
 │    │   │   └── components          # page components
 │    │   ├── RecoveryPasswordByEmail
 │    │   │   └── components          # page components
-│    │   ├── Signup
+│    │   ├── SignUp
 │    │   │   └── components          # page components
 │    │   └── Worldwide
 │    │       └── components          # page components 

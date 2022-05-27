@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { FormData } from 'pages/Signup/types'
+import { FormData } from 'pages/SignUp/types'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import axios from 'axios'
@@ -12,7 +12,7 @@ import {
   RepeatPassword,
 } from 'components'
 
-const SignupForm = () => {
+const SignUpForm = () => {
   const { t } = useTranslation()
   let navigate = useNavigate()
   const [showAlert, setShowAlert] = useState<boolean>(false)
@@ -87,7 +87,7 @@ const SignupForm = () => {
             formState={formState}
             unique={t('unique')}
             label='Username'
-            page='Signup'
+            page='SignUp'
             type='text'
             value={3}
           />
@@ -122,4 +122,4 @@ const SignupForm = () => {
   )
 }
 
-export default SignupForm
+export default SignUpForm

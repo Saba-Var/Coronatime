@@ -9,8 +9,8 @@ import {
   Dashboard,
   Worldwide,
   Country,
-  Signup,
-  Login,
+  SignUp,
+  LogIn,
 } from 'pages'
 
 const App = () => {
@@ -20,8 +20,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/Sign-up' element={<Signup />} />
-        <Route path='/' element={<Login setUser={setUser} />} />
+        <Route path='/Sign-up' element={<SignUp />} />
+        <Route path='/' element={<LogIn setUser={setUser} />} />
         <Route path='/Verify-password' element={<NewPassword />} />
         <Route path='/Confirmation-email' element={<ConfirmationEmail />} />
         <Route

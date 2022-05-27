@@ -1,22 +1,22 @@
-import SignupForm from './components/SignupForm'
+import SignUpForm from './components/SignUpForm'
 import { useTranslation } from 'react-i18next'
 import { Wrapper, Question } from 'components'
 
-const Signup = () => {
+const SignUp = () => {
   const { t } = useTranslation()
 
   return (
     <Wrapper
-      page='signup'
+      page='SignUp'
       title={t('Welcome CoronaTime')}
       details={t('Enter info')}
     >
       <>
-        <SignupForm />
+        <SignUpForm />
         <Question question={t('Have account')} action={t('Sign')} link='/' />
       </>
     </Wrapper>
   )
 }
 
-export default Signup
+export default SignUp

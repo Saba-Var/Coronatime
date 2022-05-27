@@ -43,7 +43,7 @@ const TextInput: React.FC<InputFieldProps> = (props) => {
       />
 
       {isCorrect && <CorrectIcon />}
-      {!error && props.page === 'Signup' && (
+      {!error && props.page === 'SignUp' && (
         <p className='text-sm text-gray'>{t('unique')}</p>
       )}
     </div>

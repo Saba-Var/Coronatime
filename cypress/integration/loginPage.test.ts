@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 
-describe('Login page tests', () => {
+describe('LogIn page tests', () => {
   beforeEach(() => {
     cy.visit('/')
   })
 
-  it('user can see all components of Login page', () => {
+  it('user can see all components of LogIn page', () => {
     cy.beVisible('Welcome back! Please enter your details')
     cy.beVisible('Remember this device')
     cy.beVisible('Forgot password?')

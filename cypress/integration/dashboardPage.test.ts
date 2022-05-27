@@ -74,7 +74,7 @@ describe('Dashboard', () => {
     cy.beVisible('Country not found!')
   })
 
-  it('if there is no token in a localStorage then redirect to login page', () => {
+  it('if there is no token in a localStorage then redirect to LogIn page', () => {
     cy.intercept('GET', 'https://coronatime-api.devtest.ge/api/countries', {
       statusCode: 500,
     })

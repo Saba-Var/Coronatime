@@ -5,7 +5,7 @@ const WelcomeText: React.FC<WelcomeTextProps> = (props) => {
     <>
       <h2
         className={`font-black  text-black text-xl mt-8 1.5xl:w-[500px] ${
-          props.page === 'login' && 'text-2xl mb-4'
+          props.page === 'LogIn' && 'text-2xl mb-4'
         }`}
       >
         {props.title}

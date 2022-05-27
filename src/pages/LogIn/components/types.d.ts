@@ -3,6 +3,6 @@ export type FormData = {
   Password: string
 }
 
-export type LoginFormProps = {
+export type LogInFormProps = {
   setUser: any
 }

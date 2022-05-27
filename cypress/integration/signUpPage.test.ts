@@ -32,16 +32,16 @@ describe('Sign up page', () => {
   })
 
   it('show error messages when inputs are invalid', () => {
-    cy.signUpErrors()
+    cy.SignUpErrors()
   })
 
-  it('user can go to the login page', () => {
+  it('user can go to the LogIn page', () => {
     cy.get("[data-TestId='Question']").click()
     cy.url().should('not.include', '/Sign-up')
   })
 
   it('show no errors if input fields are valid', () => {
-    cy.signUpErrors()
+    cy.SignUpErrors()
     cy.get("[data-TestId='Username']").clear().type('Saba')
     cy.get("[data-TestId='Email']").clear().type('sabavar@redberry.ge')
     cy.get("[data-TestId='Password']").clear().type('Saba')
