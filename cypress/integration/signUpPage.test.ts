@@ -82,7 +82,7 @@ describe('Sign up page', () => {
       .clear()
       .type('name@gmail.com', { delay: 200 })
     cy.intercept('POST', 'https://coronatime-api.devtest.ge/api/register', {
-      statusText: 'Created',
+      statusCode: 201,
     })
     cy.get("[data-TestId='GreenBtn']").click()
     cy.get("[data-TestId='Alert']").should('not.exist')

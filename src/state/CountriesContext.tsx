@@ -46,7 +46,7 @@ const CountriesProvider: React.FC<Provider> = (props) => {
         if (res.status === 200) setData(res.data)
       })
       .catch((error) => !token && navigate('/', { replace: true }))
-  }, [])
+  }, [navigate])
 
   return (
     <CountriesContext.Provider value={{ data, setData, unMutableData }}>

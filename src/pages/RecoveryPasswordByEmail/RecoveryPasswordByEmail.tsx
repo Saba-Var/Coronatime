@@ -27,28 +27,28 @@ const RecoveryPasswordByEmail = () => {
     apiError,
     errors,
   }
-  const submitHandler = () => {
-    axios({
-      method: 'post',
-      url: 'https://coronatime-api.devtest.ge/api/password/send-recovery-link',
-      headers: {
-        'Content-Type': 'application/json',
-        accept: 'application/json',
-      },
-      data: JSON.stringify({
-        email: watch().Email,
-        backlink: 'http://localhost:3000/Verify-password',
-      }),
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          setApiError(false)
-          navigate('/Confirmation-email', { replace: true })
-        }
+
+  const submitHandler = async () => {
+    try {
+      let response = await axios({
+        method: 'post',
+        url: 'https://coronatime-api.devtest.ge/api/password/send-recovery-link',
+        headers: {
+          'Content-Type': 'application/json',
+          accept: 'application/json',
+        },
+        data: JSON.stringify({
+          email: watch().Email,
+          backlink: 'http://localhost:3000/Verify-password',
+        }),
       })
-      .catch((error) => {
-        if (error) setApiError(true)
-      })
+      if (response.status === 200) {
+        setApiError(false)
+        navigate('/Confirmation-email', { replace: true })
+      }
+    } catch (error) {
+      setApiError(true)
+    }
   }
 
   return (

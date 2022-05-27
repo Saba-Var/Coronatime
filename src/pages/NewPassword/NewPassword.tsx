@@ -36,8 +36,8 @@ const NewPassword: React.FC<{}> = (props) => {
     errors,
   }
 
-  const submitHandler = () => {
-    axios({
+  const submitHandler = async () => {
+    let response = await axios({
       method: 'post',
       url: 'https://coronatime-api.devtest.ge/api/password/recover',
       headers: {
@@ -49,10 +49,9 @@ const NewPassword: React.FC<{}> = (props) => {
         password: watch().Password,
         repeatPassword: watch()['Repeat Password'],
       }),
-    }).then((res) => {
-      if (res.status === 200)
-        navigate('/Password-confirmation', { replace: true })
     })
+    if (response.status === 200)
+      navigate('/Password-confirmation', { replace: true })
   }
 
   return (

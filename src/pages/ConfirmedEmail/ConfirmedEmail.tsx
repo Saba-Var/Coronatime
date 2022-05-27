@@ -10,24 +10,23 @@ function ConfirmedEmail() {
   const navigate = useNavigate()
   const { t } = useTranslation()
 
-  const onclickHandler = () => {
-    axios({
-      method: 'post',
-      url: 'https://coronatime-api.devtest.ge/api/confirm-account',
-      headers: {
-        'Content-Type': 'application/json',
-        accept: 'application/json',
-      },
-      data: {
-        hash,
-      },
-    })
-      .then((res) => {
-        if (res.status === 200) navigate('/', { replace: true })
+  const onclickHandler = async () => {
+    try {
+      let response = await axios({
+        method: 'post',
+        url: 'https://coronatime-api.devtest.ge/api/confirm-account',
+        headers: {
+          'Content-Type': 'application/json',
+          accept: 'application/json',
+        },
+        data: {
+          hash,
+        },
       })
-      .catch((error) => {
-        if (error) alert(`${error.message} 📛`)
-      })
+      if (response.status === 200) navigate('/', { replace: true })
+    } catch (error: any) {
+      alert(`${error.message} 📛`)
+    }
   }
 
   return (

@@ -35,32 +35,33 @@ function SignupForm() {
 
   const passwordMatch = watch()['Repeat Password'] === watch().Password
 
-  const submitHandler = (data: FormData): void => {
+  const submitHandler = async (data: FormData) => {
     if (isValid && passwordMatch) {
-      const newUser = JSON.stringify({
-        username: data.Username,
-        email: data.Email,
-        password: data.Password,
-        repeatPassword: data['Repeat Password'],
-        redirectOnConfirm: 'http://localhost:3000/Confirmed-email',
-      })
-      axios({
-        method: 'post',
-        url: 'https://coronatime-api.devtest.ge/api/register',
-        headers: {
-          'Content-Type': 'application/json',
-          accept: 'application/json',
-        },
-        data: newUser,
-      })
-        .then((res) => {
+      try {
+        const newUser = JSON.stringify({
+          username: data.Username,
+          email: data.Email,
+          password: data.Password,
+          repeatPassword: data['Repeat Password'],
+          redirectOnConfirm: 'http://localhost:3000/Confirmed-email',
+        })
+        let response = await axios({
+          method: 'post',
+          url: 'https://coronatime-api.devtest.ge/api/register',
+          headers: {
+            'Content-Type': 'application/json',
+            accept: 'application/json',
+          },
+          data: newUser,
+        })
+        if (response.status === 201) {
           setShowAlert(false)
           navigate('/Confirmation-email', { replace: true })
-        })
-        .catch((error) => {
-          setShowAlert(true)
-          setMessage(error.response.data[0].message)
-        })
+        }
+      } catch (error: any) {
+        setShowAlert(true)
+        setMessage(error.response.data[0].message)
+      }
     }
   }
 

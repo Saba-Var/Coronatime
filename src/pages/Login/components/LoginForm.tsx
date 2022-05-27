@@ -31,32 +31,30 @@ const LoginForm: React.FC<{
     },
   })
 
-  const submitHandler = (data: FormData): void => {
-    axios({
-      method: 'post',
-      url: 'https://coronatime-api.devtest.ge/api/login',
-      headers: {
-        'Content-Type': 'application/json',
-        accept: 'application/json',
-      },
-
-      data: JSON.stringify({
-        username: data.Username,
-        password: data.Password,
-      }),
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          setApiError(false)
-          props.setUser(watch().Username)
-          localStorage.setItem('Username', watch().Username)
-          localStorage.setItem('token', res.data.token)
-          navigate('/Dashboard/Worldwide', { replace: true })
-        }
+  const submitHandler = async (data: FormData) => {
+    try {
+      let response = await axios({
+        method: 'post',
+        url: 'https://coronatime-api.devtest.ge/api/login',
+        headers: {
+          'Content-Type': 'application/json',
+          accept: 'application/json',
+        },
+        data: JSON.stringify({
+          username: data.Username,
+          password: data.Password,
+        }),
       })
-      .catch((error) => {
-        if (error) setApiError(true)
-      })
+      if (response.status === 200) {
+        setApiError(false)
+        props.setUser(watch().Username)
+        localStorage.setItem('Username', watch().Username)
+        localStorage.setItem('token', response.data.token)
+        navigate('/Dashboard/Worldwide', { replace: true })
+      }
+    } catch (error) {
+      setApiError(true)
+    }
   }
 
   const formState = {
