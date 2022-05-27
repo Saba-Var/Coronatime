@@ -2,9 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Remember } from 'components'
 
-const ForgotPassword: React.FC<{ register?: (name: any) => void }> = (
-  props
-) => {
+const ForgotPassword = () => {
   const { t } = useTranslation()
   return (
     <div className='flex justify-between mt-6 items-center'>

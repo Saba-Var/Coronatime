@@ -6,7 +6,6 @@ import { ErrorMessage } from 'components'
 const EmailInput: React.FC<EmailProps> = (props) => {
   const isCorrect = !props.errors && props.dirtyFields[props.label]
   const { t } = useTranslation()
-  console.log(props.errors)
   return (
     <div className='flex flex-col gap-[2px] relative h-[100px]'>
       <label className='text-black font-black'>{t(props.label)}</label>
