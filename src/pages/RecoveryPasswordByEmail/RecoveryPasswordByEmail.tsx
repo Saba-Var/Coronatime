@@ -1,4 +1,4 @@
-import { RecoveryWrapper, TextInput, GreenBtn } from 'components'
+import { RecoveryWrapper, TextInput, GreenBtn, Language } from 'components'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
@@ -55,7 +55,7 @@ const RecoveryPasswordByEmail = () => {
     <RecoveryWrapper>
       <form
         onSubmit={handleSubmit(submitHandler)}
-        className='flex flex-col gap-[300px] md:gap-4'
+        className='flex flex-col h-screen justify-between  md:justify-start md:gap-4'
       >
         <TextInput
           placeholder={t('Email Placeholder')}
@@ -66,7 +66,12 @@ const RecoveryPasswordByEmail = () => {
           type='text'
           value={3}
         />
-        <GreenBtn text='RESET PASSWORD' />
+        <div className='flex flex-col gap-3'>
+          <GreenBtn text='RESET PASSWORD' />
+          <div className='flex justify-center'>
+            <Language />
+          </div>
+        </div>
       </form>
     </RecoveryWrapper>
   )

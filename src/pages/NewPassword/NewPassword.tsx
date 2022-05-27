@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import {
+  Language,
   RecoveryWrapper,
   TextInput,
   GreenBtn,
@@ -58,7 +59,7 @@ const NewPassword: React.FC<{}> = (props) => {
     <RecoveryWrapper>
       <form
         onSubmit={handleSubmit(submitHandler)}
-        className='flex flex-col gap-[300px] md:gap-4'
+        className='flex flex-col h-screen justify-between md:justify-start'
       >
         <div className='flex flex-col gap-3 md:gap-6'>
           <TextInput
@@ -79,7 +80,12 @@ const NewPassword: React.FC<{}> = (props) => {
             data={watch()}
           />
         </div>
-        <GreenBtn text='RESET PASSWORD' />
+        <div className='flex flex-col gap-3'>
+          <GreenBtn text='RESET PASSWORD' />
+          <div className='flex justify-center'>
+            <Language />
+          </div>
+        </div>
       </form>
     </RecoveryWrapper>
   )
