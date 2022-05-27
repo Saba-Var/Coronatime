@@ -1,5 +1,4 @@
-import { LogOut } from 'pages/Dashboard/components'
-import { Menu } from 'pages/Dashboard/components'
+import { LogOut, Menu } from 'pages/Dashboard/components'
 import { Logo } from 'components/svgs'
 import { Language } from 'components'
 

@@ -9,12 +9,10 @@ describe('New password page', () => {
     cy.beVisible('RESET PASSWORD')
     cy.beVisible('Password')
     cy.beVisible('Repeat Password')
-    cy.beVisible('English')
     cy.get("[data-TestId='Language']").select('Georgian')
     cy.beVisible('პაროლის შეცვლა')
     cy.beVisible('პაროლი')
     cy.beVisible('გაიმეორეთ პაროლი')
-    cy.beVisible('ინგლისური')
   })
 
   it('if input fields are invalid show error message', () => {

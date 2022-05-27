@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useEffect, useState } from 'react'
 import i18n from 'i18next'
 
 const Language: React.FC<{ setLanguage?: (language: string) => void }> = (
@@ -11,7 +11,7 @@ const Language: React.FC<{ setLanguage?: (language: string) => void }> = (
   useEffect(() => {
     i18n.changeLanguage(language)
     if (props.setLanguage) props.setLanguage(language)
-  }, [language])
+  }, [language, props])
 
   return (
     <div>

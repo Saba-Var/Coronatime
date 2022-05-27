@@ -15,7 +15,6 @@ describe('Password Recovery', () => {
     )
     cy.beVisible('RESET PASSWORD')
     cy.beVisible('Email')
-    cy.beVisible('English')
     cy.get("[data-TestId='Language']").select('Georgian', { force: true })
     cy.beVisible('პაროლის შეცვლა')
     cy.beVisible('ელ-ფოსტა')

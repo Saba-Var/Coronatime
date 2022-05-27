@@ -19,10 +19,10 @@ Cypress.Commands.add('openMenu', () => {
 })
 
 Cypress.Commands.add('beVisible', (v) => {
-  cy.contains(v).should('be.visible')
+  cy.contains(v).should('be.visible', { force: true })
 })
 
-Cypress.Commands.add('signUpErrors', (v) => {
+Cypress.Commands.add('signUpErrors', () => {
   cy.get("[data-TestId='Username']").type('sa')
   cy.get("[data-TestId='ErrorIcon']").should('be.visible')
   cy.get("[data-TestId='Email']").type('sabavar@redberry.!!')
@@ -36,7 +36,7 @@ Cypress.Commands.add('signUpErrors', (v) => {
   cy.url().should('include', '/Sign-up')
 })
 
-Cypress.Commands.add('correctSignUp', (v) => {
+Cypress.Commands.add('correctSignUp', () => {
   cy.get("[data-TestId='Username']").type('saba', { force: true })
   cy.get("[data-TestId='Email']").type('sabavar@redberry.ge', { force: true })
   cy.get("[data-TestId='Password']").type('password', { force: true })
