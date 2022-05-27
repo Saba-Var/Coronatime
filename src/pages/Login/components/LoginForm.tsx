@@ -87,7 +87,7 @@ const LoginForm: React.FC<{
           type='password'
         />
       </div>
-      <ForgotPassword register={register} />
+      <ForgotPassword />
       <GreenBtn text='Log in' />
     </form>
   )
