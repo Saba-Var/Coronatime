@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-export {}
 
 Cypress.Commands.add('LogIn', () => {
   cy.get("[data-TestId='Username']").type('qqqq', { force: true })

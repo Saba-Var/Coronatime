@@ -1,6 +1,6 @@
-import { CountriesContext } from 'state/CountriesContext'
 import { useTranslation } from 'react-i18next'
 import { SearchIcon } from 'components/svgs'
+import { CountriesContext } from 'state'
 import { DataType } from 'state/types'
 import { useContext } from 'react'
 

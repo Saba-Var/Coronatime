@@ -1,5 +1,4 @@
-import { CountriesContext } from 'state/CountriesContext'
-import CountriesProvider from 'state/CountriesContext'
+import { CountriesContext, CountriesProvider } from 'state'
 import { Header } from 'pages/Dashboard/components'
 import { Outlet } from 'react-router-dom'
 import { useContext } from 'react'
