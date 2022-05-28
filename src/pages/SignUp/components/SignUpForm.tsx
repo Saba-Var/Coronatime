@@ -80,18 +80,16 @@ const SignUpForm = () => {
           message={message}
         />
       )}
-      <div className='flex flex-col gap-4'>
-        <div>
-          <TextInput
-            placeholder={t('Username placeholder')}
-            formState={formState}
-            unique={t('unique')}
-            label='Username'
-            page='SignUp'
-            type='text'
-            value={3}
-          />
-        </div>
+      <div className='flex flex-col'>
+        <TextInput
+          placeholder={t('Username placeholder')}
+          formState={formState}
+          unique={t('unique')}
+          label='Username'
+          page='SignUp'
+          type='text'
+          value={3}
+        />
         <EmailInput
           dirtyFields={dirtyFields}
           valid={t('Valid email')}

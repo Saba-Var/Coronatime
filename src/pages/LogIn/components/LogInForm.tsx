@@ -60,7 +60,7 @@ const LogInForm: React.FC<LogInFormProps> = (props) => {
 
   return (
     <form onSubmit={handleSubmit(submitHandler)}>
-      <div className='flex flex-col gap-4'>
+      <div className='flex flex-col'>
         <TextInput
           placeholder={t('Username placeholder')}
           message={t('Name not found')}

@@ -27,7 +27,7 @@ const Language: React.FC<LanguageProps> = (props) => {
         }}
         name='languages'
         className={`border-0 form-select form-select-lg
-        appearance-none block w-full px-4 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border-solid border-border-gray rounded transition ease-in-out focus:text-gray-700focus:border-blue-600 focus:outline-none hover:scale-110 cursor-pointer `}
+        appearance-none block w-full px-2 py-1 text-base font-normal mr-2 text-gray-700 bg-white bg-clip-padding bg-no-repeat border-solid border-border-gray rounded transition ease-in-out focus:text-gray-700focus:border-blue-600 focus:outline-none hover:scale-110 cursor-pointer `}
       >
         <option value='en' onClick={() => i18n.changeLanguage('en')}>
           {t('English')}
