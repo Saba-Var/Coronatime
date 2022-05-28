@@ -7,7 +7,7 @@ const EmailInput: React.FC<EmailProps> = (props) => {
   const isCorrect = !props.errors && props.dirtyFields[props.label]
   const { t } = useTranslation()
   return (
-    <div className='flex flex-col gap-[2px] relative h-[100px]'>
+    <div className='flex flex-col gap-[2px] relative h-[100px] my-2  '>
       <label className='text-black font-black text-base'>
         {t(props.label)}
       </label>
@@ -28,7 +28,7 @@ const EmailInput: React.FC<EmailProps> = (props) => {
           },
         })}
         type='text'
-        className={`border-border-gray border-[1px] h-14 px-6 rounded-lg focus:ring-2 focus:border-link-blue outline-none ${
+        className={`border-border-gray border-[1px] h-14 px-6 rounded-lg focus:ring-ringBlue focus:ring-4 focus:border-link-blue outline-none ${
           props.errors && 'border-red border-2'
         } bg-transparent ${isCorrect && 'border-green'}`}
         placeholder={t('Email Placeholder')}

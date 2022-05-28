@@ -60,7 +60,7 @@ const NewPassword = () => {
         onSubmit={handleSubmit(submitHandler)}
         className='flex flex-col h-screen justify-between md:justify-start'
       >
-        <div className='flex flex-col gap-3 md:gap-6'>
+        <div className='flex flex-col'>
           <TextInput
             placeholder={t('Password placeholder')}
             unique={t('Unique Password')}

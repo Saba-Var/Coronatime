@@ -19,7 +19,7 @@ const RepeatPassword: React.FC<PasswordProps> = (props) => {
           required: 'Required',
         })}
         type='password'
-        className={`border-border-gray border-[1px] h-14 px-6 rounded-lg focus:ring-2 focus:border-link-blue outline-none ${
+        className={`border-border-gray border-[1px] h-14 px-6 rounded-lg focus:ring-ringBlue focus:ring-4 focus:border-link-blue outline-none ${
           (props.errors || match) && 'border-red border-2'
         } bg-transparent ${isCorrect && 'border-green'}`}
         placeholder={t('Repeat Password')}

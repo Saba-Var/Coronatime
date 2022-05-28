@@ -12,11 +12,7 @@ const TextInput: React.FC<InputFieldProps> = (props) => {
     formState.dirtyFields[props.label] && !error && !formState.apiError
 
   return (
-    <div
-      className={`flex flex-col gap-[2px] relative !h-[115px] ${
-        props.label !== 'Password' && 'mb-5'
-      }`}
-    >
+    <div className={`flex flex-col gap-1 relative !h-[128px] `}>
       <label className='text-black font-bold text-base'>{t(props.label)}</label>
       <input
         data-TestId={props.label}
@@ -28,9 +24,9 @@ const TextInput: React.FC<InputFieldProps> = (props) => {
           },
         })}
         type={props.type}
-        className={`border-border-gray border-[1px] !h-14 px-6 rounded-lg focus:ring-2 focus:border-link-blue outline-none ${
+        className={`border-border-gray border-[1px] !h-14 px-6 rounded-lg   focus:ring-ringBlue focus:ring-4 focus:border-link-blue outline-none ${
           (formState.apiError || error) && 'border-red border-2'
-        } bg-transparent ${isCorrect && 'border-green'} `}
+        } bg-transparent ${isCorrect && 'border-green'} mb-1`}
         placeholder={props.placeholder}
       />
       <ErrorMessage

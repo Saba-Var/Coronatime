@@ -69,6 +69,7 @@ module.exports = {
         yellow: '#EAD621',
         yellowBG: '#fdfced',
         grayBG: '#F6F6F7',
+        ringBlue: '#dbe8fb',
       },
       fontFamily: {
         Inter: ['Inter', 'sans-serif'],
