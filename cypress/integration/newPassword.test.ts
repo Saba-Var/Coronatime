@@ -17,10 +17,11 @@ describe('New password page', () => {
 
   it('if input fields are invalid show error message', () => {
     cy.get("[data-TestId='Password']").type('sa', { force: true })
-    cy.beVisible("Passwords don't match")
+    cy.contains("Passwords don't match").should('not.exist')
     cy.get("[data-TestId='Language']").select('Georgian')
-    cy.beVisible('პაროლები არ ემთხვევა')
     cy.get("[data-TestId='CorrectIcon']").should('not.exist')
+    cy.get("[data-TestId='Repeat Password']").type('sa', { force: true })
+    cy.beVisible('პაროლი უნდა შედგებოდეს მინ 3 სიმბოლოსგან')
   })
 
   it('if input fields are valid show feedback and submit', () => {

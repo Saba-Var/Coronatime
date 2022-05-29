@@ -28,7 +28,7 @@ Cypress.Commands.add('SignUpErrors', () => {
   cy.get("[data-TestId='Email']").type('sabavar@redberry.!!')
   cy.beVisible('Enter valid email address!')
   cy.get("[data-TestId='Password']").type('sa')
-  cy.beVisible('Password should be unique, min 3 symbols')
+  cy.contains('Password should be unique, min 3 symbols').should('not.exist')
   cy.get("[data-TestId='Repeat Password']").type('password', { force: true })
   cy.beVisible("Passwords don't match")
   cy.get("[data-TestId='CorrectIcon']").should('not.exist')
