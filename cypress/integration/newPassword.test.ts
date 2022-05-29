@@ -17,10 +17,8 @@ describe('New password page', () => {
 
   it('if input fields are invalid show error message', () => {
     cy.get("[data-TestId='Password']").type('sa', { force: true })
-    cy.beVisible('Password should be unique, min 3 symbols')
     cy.beVisible("Passwords don't match")
     cy.get("[data-TestId='Language']").select('Georgian')
-    cy.beVisible('პაროლი უნდა შედგებოდეს მინ 3 სიმბოლოსგან')
     cy.beVisible('პაროლები არ ემთხვევა')
     cy.get("[data-TestId='CorrectIcon']").should('not.exist')
   })

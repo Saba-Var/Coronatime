@@ -25,23 +25,31 @@ const TextInput: React.FC<InputFieldProps> = (props) => {
         })}
         type={props.type}
         className={`border-border-gray border-[1px] !h-14 px-6 rounded-lg   focus:ring-ringBlue focus:ring-4 focus:border-link-blue outline-none ${
-          (formState.apiError || error) && 'border-red border-2'
-        } bg-transparent ${isCorrect && 'border-green'} mb-1`}
+          (formState.apiError || error) &&
+          !props.showErrors &&
+          'border-red border-2'
+        } bg-transparent ${
+          isCorrect && !props.showErrors && 'border-green'
+        } mb-1`}
         placeholder={props.placeholder}
       />
-      <ErrorMessage
-        show={!error && formState.apiError}
-        text={props.message}
-        apiError={formState.apiError}
-      />
-      <ErrorMessage
-        show={error}
-        text={props.unique || props.required}
-        error={error}
-      />
-      {isCorrect && <CorrectIcon />}
-      {!error && props.page === 'SignUp' && (
-        <p className='text-sm text-gray'>{t('unique')}</p>
+      {!props.showErrors && (
+        <>
+          <ErrorMessage
+            show={!error && formState.apiError}
+            text={props.message}
+            apiError={formState.apiError}
+          />
+          <ErrorMessage
+            show={error}
+            text={props.unique || props.required}
+            error={error}
+          />
+          {isCorrect && <CorrectIcon />}
+          {!error && props.page === 'SignUp' && (
+            <p className='text-sm text-gray'>{t('unique')}</p>
+          )}
+        </>
       )}
     </div>
   )

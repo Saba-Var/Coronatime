@@ -65,6 +65,7 @@ const NewPassword = () => {
             placeholder={t('Password placeholder')}
             unique={t('Unique Password')}
             formState={formState}
+            showErrors={true}
             label='Password'
             type='password'
             value={3}

@@ -13,3 +13,7 @@ export type ArrowUpProps = {
     sort: boolean
   }
 }
+
+export type CorrectIconProps = {
+  styles?: string
+}

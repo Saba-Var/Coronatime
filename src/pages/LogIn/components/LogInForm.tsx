@@ -52,6 +52,7 @@ const LogInForm: React.FC<LogInFormProps> = (props) => {
   }
 
   const formState = {
+    showErrors: true,
     dirtyFields,
     register,
     apiError,

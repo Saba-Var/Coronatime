@@ -67,8 +67,8 @@ const SignUpForm = () => {
 
   const formState = {
     dirtyFields,
-    errors,
     register,
+    errors,
   }
 
   return (
@@ -101,12 +101,14 @@ const SignUpForm = () => {
           placeholder={t('Password placeholder')}
           unique={t('Unique Password')}
           formState={formState}
+          showErrors={true}
           label='Password'
           type='password'
           value={3}
         />
         <RepeatPassword
           errors={errors['Repeat Password']}
+          passwordErrors={errors.Password}
           valid={t(`Password match`)}
           dirtyFields={dirtyFields}
           label={'Repeat Password'}

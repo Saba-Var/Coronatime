@@ -7,7 +7,7 @@ const EmailInput: React.FC<EmailProps> = (props) => {
   const isCorrect = !props.errors && props.dirtyFields[props.label]
   const { t } = useTranslation()
   return (
-    <div className='flex flex-col gap-[2px] relative h-[100px] my-2  '>
+    <div className='flex flex-col gap-[5px] relative h-[105px] my-2  '>
       <label className='text-black font-black text-base'>
         {t(props.label)}
       </label>
@@ -38,7 +38,7 @@ const EmailInput: React.FC<EmailProps> = (props) => {
         error={props.errors}
         show={props.errors}
       />
-      {isCorrect && <CorrectIcon />}
+      {isCorrect && <CorrectIcon styles='top-[48px]' />}
     </div>
   )
 }

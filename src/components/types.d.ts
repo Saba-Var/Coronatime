@@ -1,5 +1,6 @@
 export type PasswordProps = {
   data: { 'Repeat Password': string; Password: string }
+  passwordErrors?: any
   required: string
   dirtyFields: any
   register: any
@@ -9,6 +10,7 @@ export type PasswordProps = {
 }
 
 export type InputFieldProps = {
+  showErrors?: boolean
   placeholder: string
   required?: string
   message?: string
@@ -17,7 +19,6 @@ export type InputFieldProps = {
   label: string
   page?: string
   type: string
-
   formState: {
     apiError?: boolean
     dirtyFields: any
