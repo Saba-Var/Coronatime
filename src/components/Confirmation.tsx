@@ -1,7 +1,8 @@
+import { ConfirmationProps } from 'components/types'
 import { completedIcon } from 'assets/images'
 import { Logo } from 'components/svgs'
 
-const Confirmation: React.FC<{ text: string }> = (props) => {
+const Confirmation: React.FC<ConfirmationProps> = (props) => {
   return (
     <div className='w-[375px] p-4 mx-auto flex flex-col h-screen'>
       <div className='flex sm:justify-center'>

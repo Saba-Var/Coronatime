@@ -102,3 +102,5 @@ export type WelcomeTextProps = {
   details: string
   page?: string
 }
+
+export type ConfirmationProps = { text: string }
