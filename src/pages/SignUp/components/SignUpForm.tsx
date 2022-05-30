@@ -43,7 +43,8 @@ const SignUpForm = () => {
           email: data.Email,
           password: data.Password,
           repeatPassword: data['Repeat Password'],
-          redirectOnConfirm: 'http://localhost:3000/Confirmed-email',
+          redirectOnConfirm:
+            'http://coronatime.sabavar.redberryinternship.ge/Confirmed-email',
         })
         let response = await axios({
           method: 'post',

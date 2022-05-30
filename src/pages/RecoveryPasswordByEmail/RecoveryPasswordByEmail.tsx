@@ -39,7 +39,8 @@ const RecoveryPasswordByEmail = () => {
         },
         data: JSON.stringify({
           email: watch().Email,
-          backlink: 'http://localhost:3000/Verify-password',
+          backlink:
+            'http://coronatime.sabavar.redberryinternship.ge/Verify-password',
         }),
       })
       if (response.status === 200) {
