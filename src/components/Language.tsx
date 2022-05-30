@@ -1,4 +1,5 @@
 import { LanguageProps } from 'components/types'
+import { DropDownIcon } from 'components/svgs'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
 import i18n from 'i18next'
@@ -9,6 +10,14 @@ const Language: React.FC<LanguageProps> = (props) => {
   )
   const { t } = useTranslation()
   const changeLanguage = props.setLanguage
+  const [showLanguage, setShowLanguage] = useState<boolean>(false)
+
+  const languageSelectHandler = (lan: string) => {
+    i18n.changeLanguage(lan)
+    setLanguage(lan)
+    localStorage.setItem('Language', lan)
+    setShowLanguage(false)
+  }
 
   useEffect(() => {
     i18n.changeLanguage(language)
@@ -17,25 +26,34 @@ const Language: React.FC<LanguageProps> = (props) => {
 
   return (
     <div>
-      <select
-        value={language}
-        id='Languages'
+      <div
         data-TestId='Language'
-        onChange={(e) => {
-          setLanguage(e.target.value)
-          localStorage.setItem('Language', e.target.value)
-        }}
-        name='languages'
-        className={`border-0 form-select form-select-lg
-        appearance-none block w-full px-2 py-1 text-base font-normal mr-2 text-gray-700 bg-white bg-clip-padding bg-no-repeat border-solid border-border-gray rounded transition ease-in-out focus:text-gray-700focus:border-blue-600 focus:outline-none hover:scale-110 cursor-pointer `}
+        className={`px-2 py-1 relative text-base font-normal mr-2 text-gray-700 cursor-pointer `}
       >
-        <option value='en' onClick={() => i18n.changeLanguage('en')}>
-          {t('English')}
-        </option>
-        <option value='ge' onClick={() => i18n.changeLanguage('ge')}>
-          {t('Georgian')}
-        </option>
-      </select>
+        <div
+          className='flex items-center gap-2'
+          onClick={() => setShowLanguage(!showLanguage)}
+        >
+          <p>{language === 'en' ? t('English') : t('Georgian')}</p>
+          <DropDownIcon />
+        </div>
+        {showLanguage && (
+          <div className='absolute z-[99999] flex flex-col gap-2 top-8 hover:bg-gray-50 shadow-lg p-4 bg-white right-0 rounded-lg border-[1px] border-border-gray'>
+            <div onClick={() => languageSelectHandler('en')}>
+              {t('English')}
+            </div>
+            <div onClick={() => languageSelectHandler('ge')}>
+              {t('Georgian')}
+            </div>
+          </div>
+        )}
+      </div>
+      {showLanguage && (
+        <div
+          onClick={() => setShowLanguage(false)}
+          className='left-0 top-0 fixed w-full h-full z-[9999]'
+        ></div>
+      )}
     </div>
   )
 }

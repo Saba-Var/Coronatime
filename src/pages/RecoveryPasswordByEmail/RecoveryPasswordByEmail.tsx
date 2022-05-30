@@ -1,4 +1,4 @@
-import { RecoveryWrapper, TextInput, GreenBtn, Language } from 'components'
+import { RecoveryWrapper, TextInput, GreenBtn } from 'components'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
@@ -68,9 +68,6 @@ const RecoveryPasswordByEmail = () => {
         />
         <div className='flex flex-col gap-3'>
           <GreenBtn text='RESET PASSWORD' />
-          <div className='flex justify-center'>
-            <Language />
-          </div>
         </div>
       </form>
     </RecoveryWrapper>

@@ -1,3 +1,4 @@
+export { default as DropDownIcon } from './DropDownIcon'
 export { default as CorrectIcon } from './CorrectIcon'
 export { default as SearchIcon } from './SearchIcon'
 export { default as ArrowDown } from './ArrowDown'

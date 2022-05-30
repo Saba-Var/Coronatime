@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import {
-  Language,
   RecoveryWrapper,
   TextInput,
   GreenBtn,
@@ -82,9 +81,6 @@ const NewPassword = () => {
         </div>
         <div className='flex flex-col gap-3'>
           <GreenBtn text='RESET PASSWORD' />
-          <div className='flex justify-center'>
-            <Language />
-          </div>
         </div>
       </form>
     </RecoveryWrapper>

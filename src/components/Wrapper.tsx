@@ -12,16 +12,18 @@ const Wrapper: React.FC<WrapperProps> = (props) => {
             props.page === 'LogIn' && 'lg:mt-[3%]'
           }`}
         >
-          <Logo />
+          <div className='flex justify-between items-center pt-4 lg:pt-0'>
+            <Logo />
+            <div className='flex justify-center'>
+              <Language />
+            </div>
+          </div>
           <WelcomeText
             title={props.title}
             details={props.details}
             page={props.page}
           />
           {props.children}
-          <div className='flex justify-center '>
-            <Language />
-          </div>
         </div>
         <img
           src={vaccines}
