@@ -20,17 +20,17 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/Sign-up' element={<SignUp />} />
+        <Route path='Sign-up' element={<SignUp />} />
         <Route path='/' element={<LogIn setUser={setUser} />} />
-        <Route path='/Verify-password' element={<NewPassword />} />
-        <Route path='/Confirmation-email' element={<ConfirmationEmail />} />
+        <Route path='Verify-password' element={<NewPassword />} />
+        <Route path='Confirmation-email' element={<ConfirmationEmail />} />
         <Route
-          path='/Password-confirmation'
+          path='Password-confirmation'
           element={<PasswordConfirmation />}
         />
-        <Route path='/Confirmed-email' element={<ConfirmedEmail />} />
+        <Route path='Confirmed-email' element={<ConfirmedEmail />} />
         <Route
-          path='/Dashboard'
+          path='Dashboard'
           element={
             <Dashboard
               user={user}
@@ -43,7 +43,7 @@ const App = () => {
           <Route path='By-country' element={<Country />} />
         </Route>
         <Route
-          path='/Recovery-Password-email'
+          path='Recovery-Password-email'
           element={<RecoveryPasswordByEmail />}
         />
       </Routes>
