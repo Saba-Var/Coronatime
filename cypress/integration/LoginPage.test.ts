@@ -36,7 +36,8 @@ describe('LogIn page tests', () => {
   })
 
   it('show georgian content if user selects georgian language', () => {
-    cy.get("[data-TestId='Language']").select('Georgian', { force: true })
+    cy.get("[data-TestId='Language']").click({ force: true })
+    cy.get("[data-TestId='ge']").click({ force: true })
     cy.beVisible('კეთილი იყოს თქვენი მობრძანება')
     cy.beVisible('არ გაქვთ აგარიში? დარეგისტრირდი უფასოდ')
     cy.beVisible('დაიმახსოვრეთ მოწყობილობა')
@@ -49,7 +50,8 @@ describe('LogIn page tests', () => {
   })
 
   it('when georgian language is selected show georgian error messages', () => {
-    cy.get("[data-TestId='Language']").select('Georgian')
+    cy.get("[data-TestId='Language']").click()
+    cy.get("[data-TestId='ge']").click()
     cy.get("[data-TestId='GreenBtn']").click()
     cy.get("[data-TestId='ErrorIcon']").should('be.visible')
     cy.get("[data-TestId='CorrectIcon']").should('not.exist')

@@ -12,10 +12,15 @@ describe('Confirmed email page', () => {
     )
     cy.beVisible('Your account is confirmed, you can sign in')
     cy.get("[data-TestId='completedIcon']").should('be.visible')
-    cy.get("[data-TestId='Language']").select('Georgian')
+    cy.get("[data-TestId='Language']").click()
+    cy.get("[data-TestId='ge']").click()
     cy.beVisible('თქვენი ანგარიში დადასტურებულია, შეგიძლიათ შეხვიდეთ')
     cy.get("[data-TestId='GreenBtn']").click()
     cy.url().should('not.include', '/Confirmed-email')
+    cy.get("[data-TestId='Language']").click()
+    cy.get("[data-TestId='languageOverlay']").click()
+    cy.get("[data-TestId='languageOverlay']").should('not.exist')
+    cy.get("[data-TestId='languageSelector']").should('not.exist')
   })
 
   it("if user types url without redirecting from the gmail then he/she won't be able to verify email", () => {

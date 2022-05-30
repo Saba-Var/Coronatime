@@ -27,29 +27,35 @@ const Language: React.FC<LanguageProps> = (props) => {
   return (
     <div>
       <div
-        data-TestId='Language'
         className={`px-2 py-1 relative text-base font-normal mr-2 text-gray-700 cursor-pointer `}
       >
         <div
+          data-TestId='Language'
           className='flex items-center gap-2'
           onClick={() => setShowLanguage(!showLanguage)}
         >
-          <p>{language === 'en' ? t('English') : t('Georgian')}</p>
+          <p className='cursor-pointer'>
+            {language === 'en' ? t('English') : t('Georgian')}
+          </p>
           <DropDownIcon />
         </div>
         {showLanguage && (
-          <div className='absolute z-[99999] flex flex-col gap-2 top-8 hover:bg-gray-50 shadow-lg p-4 bg-white right-0 rounded-lg border-[1px] border-border-gray'>
-            <div onClick={() => languageSelectHandler('en')}>
+          <div
+            data-TestId='languageSelector'
+            className='absolute z-[99999] flex flex-col gap-2 top-8 hover:bg-gray-50 shadow-lg p-4 bg-white right-0 rounded-lg border-[1px] border-border-gray'
+          >
+            <p data-TestId='en' onClick={() => languageSelectHandler('en')}>
               {t('English')}
-            </div>
-            <div onClick={() => languageSelectHandler('ge')}>
+            </p>
+            <p data-TestId='ge' onClick={() => languageSelectHandler('ge')}>
               {t('Georgian')}
-            </div>
+            </p>
           </div>
         )}
       </div>
       {showLanguage && (
         <div
+          data-TestId='languageOverlay'
           onClick={() => setShowLanguage(false)}
           className='left-0 top-0 fixed w-full h-full z-[9999]'
         ></div>
