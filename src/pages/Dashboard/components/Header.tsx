@@ -5,9 +5,6 @@ import { Language } from 'components'
 
 const Header: React.FC<HeaderProps> = (props) => {
   const name = localStorage.getItem('Username') || props.user
-  const username = (
-    <p className='hidden md:block text-base font-bold pr-4'>{name}</p>
-  )
 
   return (
     <div className='border-b-border-gray border-b'>
@@ -16,7 +13,7 @@ const Header: React.FC<HeaderProps> = (props) => {
         <div className='flex items-center gap-12'>
           <Language setLanguage={props.setLanguage} />
           <div className='flex gap-4 items-center'>
-            {username}
+            <p className='hidden md:block text-base font-bold pr-4'>{name}</p>
             <div className='hidden md:block h-8 w-[1px] bg-border-gray'></div>
             <LogOut styles='hidden md:block' />
             <Menu name={name} />
