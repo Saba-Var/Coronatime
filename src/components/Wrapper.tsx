@@ -8,7 +8,7 @@ const Wrapper: React.FC<WrapperProps> = (props) => {
     <>
       <div className='lg:flex lg:justify-between h-screen overflow-x-hidden md:overflow-y-hidden  lg:pl-[7%]'>
         <div
-          className={`px-4 w-[378px] m-auto lg:m-0 lg:ml-[2%] xl:ml-[7%] lg:mt-[1.5%] lg:w-98 ${
+          className={`px-4 w-[378px] m-auto lg:m-0 lg:mt-[1.5%] lg:w-98 ${
             props.page === 'LogIn' && 'lg:mt-[3%]'
           }`}
         >
@@ -27,7 +27,7 @@ const Wrapper: React.FC<WrapperProps> = (props) => {
         </div>
         <img
           src={vaccines}
-          className={`hidden lg:block w-[55%] h-[100%]`}
+          className={`hidden lg:block w-[45%] h-[100%]`}
           alt='covid-19 vaccines'
         />
       </div>
