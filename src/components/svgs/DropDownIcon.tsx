@@ -10,7 +10,7 @@ function DropDownIcon() {
       <path
         d='M1.19998 1.3999L5.99998 6.1999L10.8 1.3999'
         stroke='#010414'
-        stroke-linecap='square'
+        strokeLinecap='square'
       />
     </svg>
   )
