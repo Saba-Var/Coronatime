@@ -41,7 +41,7 @@ Coronatime shows you current covid situation in the world with statistics of cou
 1\. First of all you need to clone repository from github:
 
 ```sh
-git clone https://github.com/RedberryInternship/coronatime-Var-Saba.git
+git clone https://github.com/Saba-Var/Coronatime.git
 ```
 
 2\. Next step requires install all the dependencies.
@@ -56,7 +56,7 @@ or
 yarn install
 ```
 
-3\. after that you can run Covid Questionaire application from terminal:
+3\. after that you can run application from terminal:
 
 ```sh
 npm start
@@ -64,8 +64,6 @@ npm start
 
 Runs the app in the development mode. Open http://localhost:3000 to view it in your browser.
 
-You can learn more in the [Create React App documentation.](https://create-react-app.dev/docs/getting-started/)
-To learn React, check out the [React documentation.](https://reactjs.org/)
 
 #
 
